@@ -82,7 +82,7 @@
     .tag {
       background-color: #f5f5f5; border-radius: 30px; padding: 8px 18px;
       font-size: 13px; font-weight: 500; color: #333; border: 1px solid #e0e0e0;
-      transition: all 0.2s; animation: tagPop 0.5s ease backwards;
+      transition: all 0.2s;
     }
     .tag:hover { background-color: #fff; border-color: var(--abnc-red); color: var(--abnc-red); transform: translateY(-2px); }
     .hero-cta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
@@ -205,37 +205,27 @@
     .stat-number { font-size: 52px; font-weight: 800; color: var(--abnc-red); line-height: 1.1; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
     .stat-desc { font-size: 14px; color: #e0c5c5; margin-top: 8px; }
 
-    .balance-section { text-align: center; margin: 80px 0; padding: 40px; background: #ffffff; border-radius: 24px; border: 1px solid var(--abnc-border); }
-    .bottle-container { width: 120px; height: 200px; margin: 40px auto; position: relative; perspective: 800px; cursor: pointer; }
-    .bottle-wrapper { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); border-radius: 40px; border: 2px solid rgba(255,255,255,0.8); box-shadow: 0 15px 35px rgba(0,0,0,0.1), inset 0 0 20px rgba(255,255,255,0.6); background: rgba(245, 245, 245, 0.3); overflow: hidden; }
-    .bottle-container:hover .bottle-wrapper { transform: rotateZ(12deg) rotateX(10deg); }
-    .liquid-oil, .liquid-water { position: absolute; left: 0; right: 0; transition: height 1s ease, background-color 1s ease; }
-    .liquid-oil { top: 0; height: 50%; background: linear-gradient(to bottom, rgba(235, 190, 80, 0.8), rgba(220, 160, 40, 0.9)); }
-    .liquid-water { bottom: 0; height: 50%; background: linear-gradient(to bottom, rgba(80, 170, 235, 0.7), rgba(40, 120, 200, 0.9)); }
-    .bottle-container:hover .liquid-oil { height: 100%; background: linear-gradient(to bottom, rgba(240, 240, 240, 0.8), rgba(220, 220, 220, 0.9)); }
-    .bottle-container:hover .liquid-water { height: 100%; background: linear-gradient(to bottom, rgba(240, 240, 240, 0.8), rgba(220, 220, 220, 0.9)); }
-    .glass-shine { position: absolute; top: 10px; left: 10px; width: 20px; height: 80px; background: rgba(255,255,255,0.6); border-radius: 20px; transform: rotate(15deg); filter: blur(2px); transition: opacity 0.3s ease; }
-    .balance-desc { font-size: 14px; color: #666; margin-top: 20px; height: 20px; }
-    .balance-desc span { display: none; }
-    .bottle-container:hover ~ .balance-desc .normal-text { display: none; }
-    .bottle-container:hover ~ .balance-desc .hover-text { display: inline-block; color: var(--abnc-red); font-weight: 600; }
-
-    .penetration-section { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin: 80px 0; background: #fff; padding: 40px; border-radius: 24px; border: 1px solid var(--abnc-border); }
-    .penetration-text { flex: 1 1 300px; }
-    .penetration-visual { flex: 1 1 300px; height: 250px; position: relative; perspective: 800px; background: #fcfcfc; border-radius: 20px; overflow: hidden; border: 1px solid #eee; }
-    .skin-layer { position: absolute; left: 10%; right: 10%; height: 40px; background: linear-gradient(to bottom, #fce4d6, #f5cbb7); border-radius: 10px; border: 1px solid #e8b8a0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: all 0.6s ease; }
-    .skin-layer:nth-child(1) { top: 40px; background: linear-gradient(to bottom, #ffe6dc, #f6cbb8); opacity: 0.8; }
-    .skin-layer:nth-child(2) { top: 90px; background: linear-gradient(to bottom, #fcdac9, #f0b8a0); opacity: 0.9; }
-    .skin-layer:nth-child(3) { top: 140px; background: linear-gradient(to bottom, #f8ceba, #e8a98e); opacity: 1; }
-    .penetration-particle { position: absolute; width: 12px; height: 12px; background: #50aaeb; border-radius: 50%; box-shadow: 0 0 10px #50aaeb; opacity: 0; }
-    .penetration-section:hover .penetration-particle { animation: dropAndSoak 1.5s ease-in forwards; }
-    .penetration-particle:nth-child(4) { left: 40%; top: -20px; animation-delay: 0s; }
-    .penetration-particle:nth-child(5) { left: 55%; top: -20px; animation-delay: 0.15s; }
-    .penetration-particle:nth-child(6) { left: 45%; top: -20px; animation-delay: 0.3s; }
-    .penetration-particle:nth-child(7) { left: 60%; top: -20px; animation-delay: 0.45s; }
-    .penetration-particle:nth-child(8) { left: 50%; top: -20px; animation-delay: 0.6s; }
-    @keyframes dropAndSoak { 0% { opacity: 1; top: 0px; transform: scale(1); } 40% { opacity: 1; top: 50px; transform: scale(1.2); } 80% { opacity: 0.8; top: 130px; transform: scale(0.8); } 100% { opacity: 0; top: 160px; transform: scale(0.5); } }
-    .penetration-section:hover .skin-layer:nth-child(3) { box-shadow: inset 0 0 20px rgba(80, 170, 235, 0.4), 0 4px 10px rgba(0,0,0,0.05); }
+    .before-after-section { margin: 80px 0; }
+    .ba-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .ba-intro { flex: 1 1 300px; }
+    .ba-intro h3 { font-size: 26px; font-weight: 700; margin-bottom: 12px; color: #111; }
+    .ba-intro p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
+    .ba-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ba-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; }
+    .ba-points .dot { width: 8px; height: 8px; background-color: var(--abnc-red); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+    .ba-slider-container { flex: 1 1 400px; position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 45px -20px rgba(0, 0, 0, 0.2); user-select: none; touch-action: pan-y; }
+    .ba-slider { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #ddd; }
+    .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .ba-img.before { background-color: #d68a7a; background-image: radial-gradient(circle at 30% 40%, rgba(190, 80, 80, 0.6) 0%, transparent 40%), radial-gradient(circle at 70% 60%, rgba(180, 60, 60, 0.5) 0%, transparent 50%), url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noiseFilter)" opacity="0.15"/></svg>'); background-size: cover, cover, 150px 150px; }
+    .ba-img.before::after { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(15deg, transparent, transparent 10px, rgba(200, 50, 50, 0.2) 10px, rgba(200, 50, 50, 0.2) 11px), repeating-linear-gradient(-25deg, transparent, transparent 15px, rgba(200, 50, 50, 0.15) 15px, rgba(200, 50, 50, 0.15) 16px); opacity: 0.8; }
+    .ba-img.after { background-color: #f5dece; background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 50%); clip-path: inset(0 0 0 50%); }
+    .ba-img.after::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%); }
+    .ba-label { position: absolute; top: 16px; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; z-index: 3; }
+    .ba-label.before-label { left: 16px; background: rgba(0, 0, 0, 0.4); }
+    .ba-label.after-label { right: 16px; background: var(--abnc-red); }
+    .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #ffffff; box-shadow: 0 0 12px rgba(0, 0, 0, 0.25); z-index: 4; transform: translateX(-50%); pointer-events: none; }
+    .ba-handle::after { content: '↔'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: #ffffff; border-radius: 50%; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--abnc-red); font-weight: 700; }
+    .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 5; margin: 0; touch-action: none; }
 
     /* =========================================================
        新增：Ultra-Fit Bubble System 原理图展示
@@ -269,28 +259,6 @@
       display: block;
       border-radius: 12px;
     }
-
-    .before-after-section { margin: 80px 0; }
-    .ba-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
-    .ba-intro { flex: 1 1 300px; }
-    .ba-intro h3 { font-size: 26px; font-weight: 700; margin-bottom: 12px; color: #111; }
-    .ba-intro p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
-    .ba-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .ba-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; }
-    .ba-points .dot { width: 8px; height: 8px; background-color: var(--abnc-red); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
-    .ba-slider-container { flex: 1 1 400px; position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 45px -20px rgba(0, 0, 0, 0.2); user-select: none; touch-action: pan-y; }
-    .ba-slider { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #ddd; }
-    .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .ba-img.before { background-color: #d68a7a; background-image: radial-gradient(circle at 30% 40%, rgba(190, 80, 80, 0.6) 0%, transparent 40%), radial-gradient(circle at 70% 60%, rgba(180, 60, 60, 0.5) 0%, transparent 50%), url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noiseFilter)" opacity="0.15"/></svg>'); background-size: cover, cover, 150px 150px; }
-    .ba-img.before::after { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(15deg, transparent, transparent 10px, rgba(200, 50, 50, 0.2) 10px, rgba(200, 50, 50, 0.2) 11px), repeating-linear-gradient(-25deg, transparent, transparent 15px, rgba(200, 50, 50, 0.15) 15px, rgba(200, 50, 50, 0.15) 16px); opacity: 0.8; }
-    .ba-img.after { background-color: #f5dece; background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 50%); clip-path: inset(0 0 0 50%); }
-    .ba-img.after::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%); }
-    .ba-label { position: absolute; top: 16px; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; z-index: 3; }
-    .ba-label.before-label { left: 16px; background: rgba(0, 0, 0, 0.4); }
-    .ba-label.after-label { right: 16px; background: var(--abnc-red); }
-    .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #ffffff; box-shadow: 0 0 12px rgba(0, 0, 0, 0.25); z-index: 4; transform: translateX(-50%); pointer-events: none; }
-    .ba-handle::after { content: '↔'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: #ffffff; border-radius: 50%; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--abnc-red); font-weight: 700; }
-    .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 5; margin: 0; touch-action: none; }
 
     .ingredients-section { display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin: 80px 0; }
     .ingredients-text { flex: 1 1 400px; }
@@ -413,7 +381,7 @@
     .bubble-large .bubble-content span { font-size: 11px; color: #555; }
 
     /* =========================================================
-       弹跳卡片画廊 (CSS 稳定兼容版)
+       极简稳妥版 Moodboard (排除一切动画干扰)
        ========================================================= */
     .moodboard-section {
       text-align: center;
@@ -426,7 +394,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 250px;
+      height: 300px;
       position: relative;
       margin-top: 20px;
     }
@@ -436,29 +404,29 @@
       height: 220px;
       border-radius: 20px;
       border: 6px solid #ffffff;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       overflow: hidden;
       position: absolute;
-      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
       background: #f0f0f0;
+      opacity: 1; /* 强制可见 */
     }
 
     .bounce-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      pointer-events: none;
+      display: block;
     }
 
-    /* 初始状态：扇形展开，并带入场动画 */
-    .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-140px, 10px); z-index: 1; animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
-    .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-70px, 0px); z-index: 2; animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both; }
-    .bounce-card:nth-child(3) { transform: rotate(0deg) translate(0px, -10px); z-index: 3; animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both; }
-    .bounce-card:nth-child(4) { transform: rotate(7deg) translate(70px, 0px); z-index: 2; animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both; }
-    .bounce-card:nth-child(5) { transform: rotate(15deg) translate(140px, 10px); z-index: 1; animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s both; }
+    /* 初始状态：扇形展开 */
+    .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-140px, 10px); z-index: 1; }
+    .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-70px, 0px); z-index: 2; }
+    .bounce-card:nth-child(3) { transform: rotate(0deg) translate(0px, -10px); z-index: 3; }
+    .bounce-card:nth-child(4) { transform: rotate(7deg) translate(70px, 0px); z-index: 2; }
+    .bounce-card:nth-child(5) { transform: rotate(15deg) translate(140px, 10px); z-index: 1; }
 
-    /* 鼠标悬停时：卡片弹跳放大，并回到最前面 */
     .bounce-card:hover {
       transform: translate(0, -30px) scale(1.15) rotate(0deg) !important;
       z-index: 10 !important;
@@ -466,44 +434,7 @@
       border-color: var(--abnc-red);
     }
 
-    @keyframes popIn {
-      0% { opacity: 0; scale: 0.5; }
-      100% { opacity: 1; scale: 1; }
-    }
-
-    .steps-wrapper { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px; }
-    .step-card { flex: 1 1 200px; background: #fff; border: 1px solid var(--abnc-border); border-left: 4px solid #e0e0e0; border-radius: 16px; padding: 28px; transition: border-left-color 0.4s ease, box-shadow 0.3s ease, transform 0.3s ease; }
-    .step-card.highlight { border-left-color: var(--abnc-red); box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
-    .step-card span { font-size: 13px; font-weight: 700; color: var(--abnc-red); letter-spacing: 1px; }
-    .step-card h3 { font-size: 20px; font-weight: 700; margin: 12px 0 8px; }
-    .step-card p { font-size: 14px; color: #555; line-height: 1.6; }
-
-    .how-to-grid { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px; }
-    .how-to-card { flex: 1 1 200px; background: #fff; border: 1px solid var(--abnc-border); border-radius: 20px; padding: 28px; transition: transform 0.25s ease, box-shadow 0.25s ease; }
-    .how-to-card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08); }
-
-    .clinical-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
-    .clinical-table th { text-align: left; padding: 16px 12px; background-color: #f7f7f7; font-weight: 600; color: #333; border-bottom: 2px solid var(--abnc-border); }
-    .clinical-table td { padding: 16px 12px; border-bottom: 1px solid var(--abnc-border); color: #444; }
-    .clinical-table tr:hover td { background-color: #fcfcfc; }
-    .clinical-note { font-size: 13px; color: #888; margin-top: 12px; }
-
-    .contact-section { background-color: var(--abnc-light-gray); padding: 60px 0; border-radius: 30px; margin: 80px 0; text-align: center; }
-    .contact-section h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; color: #111; }
-    .contact-section p { font-size: 16px; color: #555; margin-bottom: 32px; }
-    .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 24px; }
-    .contact-item { font-size: 16px; }
-    .contact-item a { color: var(--abnc-red); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
-    .contact-item a:hover { border-bottom-color: var(--abnc-red); }
-
-    .footer { border-top: 1px solid var(--abnc-border); padding: 40px 0; margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 14px; color: #777; }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: #777; text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--abnc-red); }
-
-    @media (max-width: 900px) {
-      .tiktok-concepts { grid-template-columns: 1fr; }
-    }
+    /* 手机端适配 */
     @media (max-width: 768px) {
       .hero-title { font-size: 36px; }
       .navbar { flex-direction: column; gap: 14px; }
@@ -517,7 +448,7 @@
       .concept-card { transform: none !important; }
       .sticky-checklist { flex-direction: column; gap: 6px; padding: 12px; font-size: 11px; }
       .hero { padding: 40px 20px; }
-      .moodboard-section { margin: 60px 0; overflow: hidden; }
+      .moodboard-section { margin: 60px 0; }
       .system-section { padding: 40px 20px; }
       
       .bounce-card { width: 110px; height: 160px; }
@@ -526,6 +457,21 @@
       .bounce-card:nth-child(4) { transform: rotate(7deg) translate(45px, 0px); }
       .bounce-card:nth-child(5) { transform: rotate(15deg) translate(90px, 5px); }
     }
+
+    /* 其他组件样式省略，保持你之前的一样... */
+    .clinical-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
+    .clinical-table th { text-align: left; padding: 16px 12px; background-color: #f7f7f7; font-weight: 600; color: #333; border-bottom: 2px solid var(--abnc-border); }
+    .clinical-table td { padding: 16px 12px; border-bottom: 1px solid var(--abnc-border); color: #444; }
+    .clinical-table tr:hover td { background-color: #fcfcfc; }
+    .contact-section { background-color: var(--abnc-light-gray); padding: 60px 0; border-radius: 30px; margin: 80px 0; text-align: center; }
+    .contact-section h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; color: #111; }
+    .contact-section p { font-size: 16px; color: #555; margin-bottom: 32px; }
+    .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 24px; }
+    .contact-item { font-size: 16px; }
+    .contact-item a { color: var(--abnc-red); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    .footer { border-top: 1px solid var(--abnc-border); padding: 40px 0; margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 14px; color: #777; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: #777; text-decoration: none; transition: color 0.2s; }
   </style>
 </head>
 <body>
@@ -545,7 +491,7 @@
       </div>
     </nav>
 
-    <!-- 醒目吸顶提醒 -->
+    <!-- 吸顶 Checklist -->
     <div class="sticky-checklist">
       <div>Before You Post: Add <span>#ABNC</span> & <span>#Kbeauty</span></div>
       <div>Tag <span>@abnc_official</span></div>
@@ -556,7 +502,6 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <canvas id="cursor-grid-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
-      
       <div class="hero-text" style="position: relative; z-index: 2;">
         <span class="hero-badge">NEW · 2026.09</span>
         <h1 class="hero-title">
@@ -580,7 +525,7 @@
       <div class="hero-image" style="position: relative; z-index: 2;">
         <div class="product-visual">
           <div class="product-img-container">
-            <img src="product.png" alt="ABN°C CICA BUBBLE SERUM" class="product-img" onerror="this.style.opacity='0';">
+            <img src="product.png" alt="ABN°C CICA BUBBLE SERUM" class="product-img">
           </div>
         </div>
       </div>
@@ -607,6 +552,7 @@
       </div>
       
       <div class="tiktok-concepts">
+        <!-- B01 -->
         <div class="concept-card card-foam fade-in tilt-card">
           <div class="bubble-field"><div class="css-bubble b1"></div><div class="css-bubble b2"></div><div class="css-bubble b3"></div></div>
           <div class="content-layer">
@@ -621,6 +567,7 @@ CTA: Say goodbye to greasy skin. Grab yours in my showcase.">📋 Copy Script</b
           </div>
         </div>
 
+        <!-- B02 -->
         <div class="concept-card card-prep fade-in tilt-card">
           <div class="skin-layer-after"></div><div class="skin-layer-before"></div><div class="split-line"></div>
           <div class="content-layer">
@@ -635,6 +582,7 @@ CTA: See the difference for yourself. Link below to shop!">📋 Copy Script</but
           </div>
         </div>
 
+        <!-- B03 -->
         <div class="concept-card card-routine fade-in tilt-card">
           <div class="water-absorb-glow"></div><div class="big-bubble"></div>
           <div class="content-layer">
@@ -649,6 +597,7 @@ CTA: The ultimate primer. Tap the link to upgrade your morning routine.">📋 Co
           </div>
         </div>
 
+        <!-- B04 -->
         <div class="concept-card card-foam fade-in tilt-card">
           <div class="bubble-field"><div class="css-bubble b1"></div><div class="css-bubble b2"></div><div class="css-bubble b3"></div></div>
           <div class="content-layer">
@@ -706,7 +655,7 @@ CTA: Experience the magic foam. Shop now!">📋 Copy Script</button>
       <h2>Ultra-Fit Bubble System</h2>
       <p>When the ultra-fine foam bursts, it opens absorption channels to deliver active ingredients deep into the skin without irritation.</p>
       <div class="system-image-container">
-        <img src="Ultra-Fit-Bubble-System.jpg" alt="Ultra-Fit Bubble System" onerror="this.src='https://placehold.co/900x300/f4f9f6/2e7d32?text=Ultra-Fit+Bubble+System+Image+(Rename+to+Ultra-Fit-Bubble-System.jpg)'">
+        <img src="Ultra-Fit-Bubble-System.jpg" alt="Ultra-Fit Bubble System">
       </div>
     </section>
 
@@ -737,7 +686,7 @@ CTA: Experience the magic foam. Shop now!">📋 Copy Script</button>
       </div>
     </section>
 
-    <!-- ============ 弹跳卡片画廊 (CSS 稳定版) ============ -->
+    <!-- ============ Creator Moodboard (极简稳妥版) ============ -->
     <section class="moodboard-section fade-in">
       <div class="container">
         <h2 class="section-title" style="text-align: center; margin-bottom: 8px;">Creator Moodboard</h2>
@@ -801,7 +750,7 @@ CTA: Experience the magic foam. Shop now!">📋 Copy Script</button>
     (function() { const copyBtns = document.querySelectorAll('.copy-btn'); copyBtns.forEach(btn => { btn.addEventListener('click', async () => { const scriptText = btn.getAttribute('data-script'); try { await navigator.clipboard.writeText(scriptText); const originalText = btn.innerHTML; btn.innerHTML = '✅ Copied!'; btn.classList.add('copied'); setTimeout(() => { btn.innerHTML = originalText; btn.classList.remove('copied'); }, 2000); } catch (err) { alert('Copy failed. Please select and copy manually.'); } }); }); })();
   </script>
 
-  <!-- 动态网格特效 JS (保留，只影响 Hero 背景) -->
+  <!-- 动态网格特效 JS -->
   <script>
     (function initCursorGrid() {
       const canvas = document.getElementById('cursor-grid-canvas');
