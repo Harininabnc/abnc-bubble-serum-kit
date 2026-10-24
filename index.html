@@ -119,10 +119,9 @@
     /* ---------- 通用 Section ---------- */
     .section-title { font-size: 32px; font-weight: 800; margin-bottom: 12px; color: #111; letter-spacing: -0.5px; }
     .section-sub { font-size: 16px; color: #666; margin-bottom: 40px; max-width: 700px; }
-    .disclaimer { font-size: 12px; color: #888; margin-top: 16px; line-height: 1.5; }
 
     /* =========================================================
-       TIKTOK QUICK START (高亮+弹性版)
+       TIKTOK QUICK START
        ========================================================= */
     .quick-start { margin: 40px 0 80px; background: var(--abnc-soft-bg); border-radius: 28px; padding: 48px 40px; perspective: 1500px; }
     .tiktok-concepts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
@@ -228,7 +227,7 @@
     .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 5; margin: 0; touch-action: none; }
 
     /* =========================================================
-       新增：Ultra-Fit Bubble System 原理图展示
+       Ultra-Fit Bubble System 原理图展示
        ========================================================= */
     .system-section {
       margin: 80px 0;
@@ -381,60 +380,124 @@
     .bubble-large .bubble-content span { font-size: 11px; color: #555; }
 
     /* =========================================================
-       极简稳妥版 Moodboard (排除一切动画干扰)
+       Creator Moodboard (移动端滑动 + 电脑端 3D)
        ========================================================= */
     .moodboard-section {
       text-align: center;
-      margin: 100px 0;
+      margin: 80px 0;
       position: relative;
-      overflow: hidden;
     }
-    
-    .bounce-cards-simple-wrapper {
+
+    /* 移动端滑动提示（电脑端隐藏） */
+    .swipe-hint {
+      display: none;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 16px;
+      animation: pulseHint 1.5s infinite alternate;
+    }
+    @keyframes pulseHint { 0% { opacity: 0.5; } 100% { opacity: 1; } }
+
+    .moodboard-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .moodboard-track {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 300px;
+      height: 280px;
       position: relative;
-      margin-top: 20px;
     }
 
     .bounce-card {
-      width: 160px;
-      height: 220px;
+      width: 180px;
+      height: 240px;
       border-radius: 20px;
       border: 6px solid #ffffff;
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       overflow: hidden;
       position: absolute;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
       background: #f0f0f0;
-      opacity: 1; /* 强制可见 */
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
     }
 
     .bounce-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      pointer-events: none; /* 防止拖拽图片 */
     }
 
-    /* 初始状态：扇形展开 */
-    .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-140px, 10px); z-index: 1; }
-    .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-70px, 0px); z-index: 2; }
-    .bounce-card:nth-child(3) { transform: rotate(0deg) translate(0px, -10px); z-index: 3; }
-    .bounce-card:nth-child(4) { transform: rotate(7deg) translate(70px, 0px); z-index: 2; }
-    .bounce-card:nth-child(5) { transform: rotate(15deg) translate(140px, 10px); z-index: 1; }
+    /* --- 💻 电脑端 (Hover 3D 展开) --- */
+    @media (min-width: 769px) {
+      .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-160px, 10px); z-index: 1; }
+      .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-80px, 0px); z-index: 2; }
+      .bounce-card:nth-child(3) { transform: rotate(0deg) translate(0px, -10px); z-index: 3; }
+      .bounce-card:nth-child(4) { transform: rotate(7deg) translate(80px, 0px); z-index: 2; }
+      .bounce-card:nth-child(5) { transform: rotate(15deg) translate(160px, 10px); z-index: 1; }
 
-    .bounce-card:hover {
-      transform: translate(0, -30px) scale(1.15) rotate(0deg) !important;
-      z-index: 10 !important;
-      box-shadow: 0 25px 45px rgba(197, 43, 46, 0.25);
-      border-color: var(--abnc-red);
+      .bounce-card:hover {
+        transform: translate(0, -30px) scale(1.15) rotate(0deg) !important;
+        z-index: 10 !important;
+        box-shadow: 0 25px 45px rgba(197, 43, 46, 0.25);
+        border-color: var(--abnc-red);
+      }
     }
 
-    /* 手机端适配 */
+    /* --- 📱 手机端 (横向滑动) --- */
+    @media (max-width: 768px) {
+      .swipe-hint { display: block; }
+      
+      .moodboard-track {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px 24px 30px 24px;
+        margin: 0 -24px; 
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .moodboard-track::-webkit-scrollbar { display: none; }
+
+      .bounce-card {
+        position: relative;
+        width: 220px;
+        height: 293px;
+        flex-shrink: 0;
+        margin-right: 16px;
+        scroll-snap-align: center;
+        transform: none !important;
+      }
+      .bounce-card:last-child {
+        margin-right: 24px;
+      }
+    }
+
+    .clinical-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
+    .clinical-table th { text-align: left; padding: 16px 12px; background-color: #f7f7f7; font-weight: 600; color: #333; border-bottom: 2px solid var(--abnc-border); }
+    .clinical-table td { padding: 16px 12px; border-bottom: 1px solid var(--abnc-border); color: #444; }
+    .clinical-table tr:hover td { background-color: #fcfcfc; }
+    .contact-section { background-color: var(--abnc-light-gray); padding: 60px 0; border-radius: 30px; margin: 80px 0; text-align: center; }
+    .contact-section h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; color: #111; }
+    .contact-section p { font-size: 16px; color: #555; margin-bottom: 32px; }
+    .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 24px; }
+    .contact-item { font-size: 16px; }
+    .contact-item a { color: var(--abnc-red); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    .contact-item a:hover { border-bottom-color: var(--abnc-red); }
+    .footer { border-top: 1px solid var(--abnc-border); padding: 40px 0; margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 14px; color: #777; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: #777; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--abnc-red); }
+
     @media (max-width: 768px) {
       .hero-title { font-size: 36px; }
       .navbar { flex-direction: column; gap: 14px; }
@@ -448,30 +511,8 @@
       .concept-card { transform: none !important; }
       .sticky-checklist { flex-direction: column; gap: 6px; padding: 12px; font-size: 11px; }
       .hero { padding: 40px 20px; }
-      .moodboard-section { margin: 60px 0; }
       .system-section { padding: 40px 20px; }
-      
-      .bounce-card { width: 110px; height: 160px; }
-      .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-90px, 5px); }
-      .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-45px, 0px); }
-      .bounce-card:nth-child(4) { transform: rotate(7deg) translate(45px, 0px); }
-      .bounce-card:nth-child(5) { transform: rotate(15deg) translate(90px, 5px); }
     }
-
-    /* 其他组件样式省略，保持你之前的一样... */
-    .clinical-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
-    .clinical-table th { text-align: left; padding: 16px 12px; background-color: #f7f7f7; font-weight: 600; color: #333; border-bottom: 2px solid var(--abnc-border); }
-    .clinical-table td { padding: 16px 12px; border-bottom: 1px solid var(--abnc-border); color: #444; }
-    .clinical-table tr:hover td { background-color: #fcfcfc; }
-    .contact-section { background-color: var(--abnc-light-gray); padding: 60px 0; border-radius: 30px; margin: 80px 0; text-align: center; }
-    .contact-section h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; color: #111; }
-    .contact-section p { font-size: 16px; color: #555; margin-bottom: 32px; }
-    .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 24px; }
-    .contact-item { font-size: 16px; }
-    .contact-item a { color: var(--abnc-red); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
-    .footer { border-top: 1px solid var(--abnc-border); padding: 40px 0; margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 14px; color: #777; }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: #777; text-decoration: none; transition: color 0.2s; }
   </style>
 </head>
 <body>
@@ -491,7 +532,7 @@
       </div>
     </nav>
 
-    <!-- 吸顶 Checklist -->
+    <!-- 醒目吸顶提醒 -->
     <div class="sticky-checklist">
       <div>Before You Post: Add <span>#ABNC</span> & <span>#Kbeauty</span></div>
       <div>Tag <span>@abnc_official</span></div>
@@ -502,6 +543,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <canvas id="cursor-grid-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+      
       <div class="hero-text" style="position: relative; z-index: 2;">
         <span class="hero-badge">NEW · 2026.09</span>
         <h1 class="hero-title">
@@ -686,18 +728,22 @@ CTA: Experience the magic foam. Shop now!">📋 Copy Script</button>
       </div>
     </section>
 
-    <!-- ============ Creator Moodboard (极简稳妥版) ============ -->
+    <!-- ============ Creator Moodboard ============ -->
     <section class="moodboard-section fade-in">
       <div class="container">
         <h2 class="section-title" style="text-align: center; margin-bottom: 8px;">Creator Moodboard</h2>
-        <p class="section-sub" style="text-align: center; margin: 0 auto 40px;">Hover or tap to explore the visual vibes for your next video.</p>
+        <p class="section-sub" style="text-align: center; margin: 0 auto 20px;">Hover or swipe to explore the visual vibes for your next video.</p>
         
-        <div class="bounce-cards-simple-wrapper">
-          <div class="bounce-card"><img src="abnc-model-face-01.png" alt="Mood 1"></div>
-          <div class="bounce-card"><img src="abnc-model-face-02.png" alt="Mood 2"></div>
-          <div class="bounce-card"><img src="abnc-model-serum.jpg" alt="Mood 3"></div>
-          <div class="bounce-card"><img src="abnc-model-face-03.png" alt="Mood 4"></div>
-          <div class="bounce-card"><img src="abnc-model-serum-02.jpg" alt="Mood 5"></div>
+        <p class="swipe-hint">← Swipe to explore →</p>
+
+        <div class="moodboard-container">
+          <div class="moodboard-track">
+            <div class="bounce-card"><img src="abnc-model-face-01.png" alt="Mood 1"></div>
+            <div class="bounce-card"><img src="abnc-model-face-02.png" alt="Mood 2"></div>
+            <div class="bounce-card"><img src="abnc-model-serum.jpg" alt="Mood 3"></div>
+            <div class="bounce-card"><img src="abnc-model-face-03.png" alt="Mood 4"></div>
+            <div class="bounce-card"><img src="abnc-model-serum-02.jpg" alt="Mood 5"></div>
+          </div>
         </div>
       </div>
     </section>
