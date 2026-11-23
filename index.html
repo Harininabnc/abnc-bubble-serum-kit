@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABN°C C3 CARE CICA BUBBLE SERUM | Creator Brief 2026.10</title>
+  <meta name="description" content="Creator brief for ABN°C C³ CARE Cica Bubble Serum: pre-makeup 3-in-1, minimal routine, no-tug foam texture. Scripts, 4-shot storyboards and claim-safe wording.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --abnc-red: #c52b2e;
+      --abnc-red-dark: #a01f22;
+      --abnc-light-gray: #f8f8f8;
+      --abnc-border: #eae4e1;
+      --abnc-soft-bg: #fcf9f9;
+      --abnc-cream: #fdf7f4;
+      --abnc-blush: #f7e4dd;
+      --abnc-ink: #141414;
+      --abnc-muted: #6b6461;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- 阅读进度条 ---------- */
+    .read-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--abnc-red), #e0726f);
+      z-index: 200; transition: width .1s linear;
+    }
+
+    /* ---------- 滚动淡入 ---------- */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ---------- 顶部条 & 吸顶通知 ---------- */
+    .top-bar { background-color: var(--abnc-red); height: 6px; width: 100%; }
+    .sticky-checklist {
+      background: #fff; border-bottom: 1px solid var(--abnc-border);
+      padding: 10px 0; font-size: 13px; font-weight: 500; text-align: center; color: #555;
+      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+    }
+    .sticky-checklist span { color: var(--abnc-red); font-weight: 700; }
+
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 0; border-bottom: 1px solid var(--abnc-border);
+      position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px); z-index: 100;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+    .navbar.scrolled { background-color: #ffffff; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border-bottom-color: transparent; }
+    .logo { font-weight: 800; font-size: 28px; letter-spacing: -1px; color: var(--abnc-red); text-decoration: none; }
+    .logo span { color: var(--abnc-red); font-weight: 800; }
+    .nav-links { display: flex; gap: 26px; font-size: 14px; font-weight: 500; align-items: center; }
+    .nav-links a { text-decoration: none; color: #333; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--abnc-red); }
+    .contact-btn {
+      background-color: var(--abnc-red); color: white !important;
+      padding: 10px 24px; border-radius: 40px; font-weight: 600; font-size: 14px;
+      text-decoration: none; transition: background-color 0.2s, transform 0.2s;
+    }
+    .contact-btn:hover { background-color: var(--abnc-red-dark); transform: scale(1.03); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; overflow: hidden; border-radius: 30px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 40px;
+      padding: 60px 40px; margin-top: 20px;
+      background: radial-gradient(120% 120% at 85% 10%, #fff6f2 0%, #fdf9f7 45%, #ffffff 100%);
+    }
+    .hero-text { flex: 1 1 420px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; background-color: #fff;
+      border: 1px solid #f0dcd5; padding: 7px 15px;
+      border-radius: 30px; font-size: 11.5px; font-weight: 700; letter-spacing: 1.2px;
+      color: var(--abnc-red); margin-bottom: 20px; text-transform: uppercase;
+    }
+    .hero-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--abnc-red); animation: blink 1.8s infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+    .hero-title { font-size: 52px; font-weight: 800; line-height: 1.03; margin-bottom: 16px; color: #111; letter-spacing: -1.6px; }
+    .hero-title .accent { color: var(--abnc-red); }
+    .hero-title small { display: block; font-size: 15px; letter-spacing: 2px; font-weight: 700; color: #9a8f8b; margin-bottom: 12px; text-transform: uppercase; }
+    .hero-subtitle { font-size: 17px; color: #555; margin-bottom: 22px; max-width: 540px; line-height: 1.55; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 30px; }
+    .tag {
+      background-color: #fff; border-radius: 30px; padding: 7px 15px;
+      font-size: 12.5px; font-weight: 600; color: #444; border: 1px solid #ecdfda;
+      transition: all 0.2s;
+    }
+    .tag:hover { background-color: #fff; border-color: var(--abnc-red); color: var(--abnc-red); transform: translateY(-2px); }
+    .hero-cta { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .btn-primary {
+      background-color: var(--abnc-red); color: white; padding: 15px 34px;
+      border-radius: 50px; font-weight: 700; font-size: 15px; text-decoration: none;
+      transition: all 0.2s; display: inline-block; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background-color: var(--abnc-red-dark); transform: scale(1.02); }
+    .btn-outline {
+      background-color: transparent; color: #333; padding: 15px 28px;
+      border-radius: 50px; font-weight: 600; font-size: 15px; text-decoration: none;
+      border: 1px solid #d9c9c3; transition: all 0.2s; display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--abnc-red); color: var(--abnc-red); }
+
+    /* --- 产品舞台：点击出泡泡 --- */
+    .hero-image { flex: 1 1 340px; display: flex; justify-content: center; position: relative; z-index: 2; }
+    .product-stage {
+      position: relative; width: 100%; max-width: 420px; aspect-ratio: 4 / 5;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .stage-glow {
+      position: absolute; width: 78%; height: 78%; border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, rgba(255,255,255,.65) 45%, rgba(247,228,221,0) 72%);
+      filter: blur(6px);
+    }
+    .stage-ring {
+      position: absolute; width: 76%; aspect-ratio: 1; border-radius: 50%;
+      border: 1px dashed #eddbd3; animation: spinRing 26s linear infinite;
+    }
+    @keyframes spinRing { to { transform: rotate(360deg); } }
+    .hero-product {
+      position: relative; height: 82%; width: auto; z-index: 3;
+      filter: drop-shadow(0 24px 30px rgba(120, 60, 55, .18));
+      transition: transform .35s cubic-bezier(.2,.8,.2,1);
+    }
+    .product-stage:hover .hero-product { transform: translateY(-6px) rotate(-1deg); }
+    .product-stage:active .hero-product { transform: translateY(1px) scale(.985); }
+    .stage-bubbles { position: absolute; inset: 0; overflow: visible; pointer-events: none; z-index: 4; }
+    .stage-bubbles i {
+      position: absolute; border-radius: 50%;
+      background: radial-gradient(circle at 32% 28%, #fff, rgba(219,236,248,.85) 55%, rgba(163,199,230,.75));
+      box-shadow: inset -4px -4px 10px rgba(255,255,255,.9), 0 8px 18px rgba(70,110,150,.14);
+      animation: floatBub 5s ease-in-out infinite;
+    }
+    @keyframes floatBub { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+    .foam-particle {
+      position: absolute; width: 10px; height: 10px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, rgba(232,244,255,.85) 60%, rgba(180,210,235,.7));
+      pointer-events: none; z-index: 5; opacity: 0;
+      animation: puff .9s cubic-bezier(.2,.7,.3,1) forwards;
+    }
+    @keyframes puff {
+      0% { opacity: .95; transform: translate(0,0) scale(.4); }
+      100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(var(--sc)); }
+    }
+    .pump-counter {
+      position: absolute; bottom: 4%; left: 50%; transform: translateX(-50%);
+      font-size: 11.5px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
+      color: #a89a95; z-index: 6; white-space: nowrap; transition: color .3s;
+    }
+    .pump-counter b { color: var(--abnc-red); font-size: 15px; }
+
+    /* ---------- Info Bar ---------- */
+    .info-bar { background-color: var(--abnc-light-gray); padding: 28px 0; border-radius: 20px; margin: 28px 0 70px; }
+    .info-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; text-align: center; }
+    .info-item { flex: 1 1 140px; }
+    .info-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.4px; color: #8d8480; margin-bottom: 6px; font-weight: 600; }
+    .info-value { font-size: 15.5px; font-weight: 700; color: #111; line-height: 1.35; }
+    .info-value span { display: block; font-size: 12px; font-weight: 500; color: #8a827e; margin-top: 3px; }
+
+    /* ---------- 通用 Section ---------- */
+    .sec { margin: 88px 0; }
+    .eyebrow { font-size: 11.5px; font-weight: 800; letter-spacing: 2.2px; text-transform: uppercase; color: var(--abnc-red); margin-bottom: 12px; }
+    .section-title { font-size: 34px; font-weight: 800; margin-bottom: 12px; color: #111; letter-spacing: -0.8px; line-height: 1.15; }
+    .section-sub { font-size: 16px; color: #666; margin-bottom: 36px; max-width: 720px; }
+
+    mark {
+      background: rgba(197, 43, 46, 0.1);
+      color: var(--abnc-red);
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       3 SELLING POINTS
+       ========================================================= */
+    .sp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+    .sp-card {
+      background: #fff; border: 1px solid var(--abnc-border); border-radius: 26px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease;
+      box-shadow: 0 12px 30px -22px rgba(80, 30, 30, .45);
+    }
+    .sp-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -30px rgba(197, 43, 46, .35); }
+    .sp-visual { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--abnc-cream); }
+    .sp-visual img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+    .sp-card:hover .sp-visual img { transform: scale(1.06); }
+    .sp-num {
+      position: absolute; top: 14px; left: 14px; z-index: 3;
+      width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.92);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; color: var(--abnc-red);
+      box-shadow: 0 6px 16px rgba(120,60,55,.14);
+    }
+    .sp-body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .sp-body h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.4px; line-height: 1.2; }
+    .sp-body .lede { font-size: 14.5px; color: #5f5855; }
+    .sp-points { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 2px; }
+    .sp-points li { display: flex; gap: 9px; font-size: 13.5px; color: #5c5551; line-height: 1.5; }
+    .sp-points mark { background: none; padding: 0; color: var(--abnc-red); box-shadow: inset 0 -2px 0 rgba(197, 43, 46, .22); }
+    .sp-points li::before {
+      content: ''; flex: 0 0 6px; width: 6px; height: 6px; margin-top: 7px;
+      border-radius: 50%; background: var(--abnc-red); opacity: .8;
+    }
+    .sp-scenarios { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+    .sp-scenarios span {
+      font-size: 11px; font-weight: 600; letter-spacing: .3px; color: #8a7f7b;
+      background: #faf6f4; border: 1px solid #f0e5e0; border-radius: 20px; padding: 5px 10px;
+    }
+
+    /* --- 微交互组件 --- */
+    .mini-widget {
+      border-top: 1px dashed #eee3de; margin-top: 14px; padding-top: 14px;
+      font-size: 11px; color: #9a8f8b; letter-spacing: .4px;
+    }
+    .ow-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 10.5px; font-weight: 700; color: #8a7f7b; letter-spacing: .8px; text-transform: uppercase; }
+    .ow-row span { width: 46px; flex: 0 0 46px; }
+    .ow-track { flex: 1; height: 7px; border-radius: 10px; background: #f4ece8; overflow: hidden; }
+    .ow-track i { display: block; height: 100%; width: var(--w, 50%); border-radius: 10px; transition: width 1.1s cubic-bezier(.2,.8,.2,1), background .4s; }
+    .ow-track .oil { background: linear-gradient(90deg, #f0b46a, #e39a45); }
+    .ow-track .water { background: linear-gradient(90deg, #9ccbe8, #6ba8d4); }
+    .in-view .ow-track .oil, .ow-widget:hover .ow-track .oil { --w: 50%; }
+    .in-view .ow-track .water, .ow-widget:hover .ow-track .water { --w: 50%; }
+
+    .routine-row { display: flex; align-items: center; gap: 8px; }
+    .routine-bottles { display: flex; gap: 5px; align-items: flex-end; }
+    .routine-bottles i {
+      display: block; width: 9px; border-radius: 3px 3px 2px 2px; background: #e3d3cc;
+      transition: opacity .5s, transform .5s;
+    }
+    .routine-bottles i:nth-child(1) { height: 26px; }
+    .routine-bottles i:nth-child(2) { height: 30px; }
+    .routine-bottles i:nth-child(3) { height: 24px; }
+    .routine-bottles i:nth-child(4) { height: 28px; }
+    .routine-bottles i:nth-child(5) { height: 22px; }
+    .in-view .routine-bottles i { opacity: .28; transform: scaleY(.7); transform-origin: bottom; }
+    .routine-arrow { color: var(--abnc-red); font-weight: 800; font-size: 12px; }
+    .routine-one {
+      width: 14px; height: 34px; border-radius: 4px; background: linear-gradient(180deg, #f7e7e2, #eccfc6);
+      border: 1px solid #e2c9c0; transform: scale(.6); opacity: .5;
+      transition: transform .6s cubic-bezier(.2,1.3,.3,1), opacity .5s;
+    }
+    .in-view .routine-one { transform: scale(1); opacity: 1; }
+
+    .tug-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .tug-row b { font-size: 10px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #8a7f7b; width: 58px; flex: 0 0 58px; }
+    .tug-track { flex: 1; height: 7px; border-radius: 10px; background: #f4ece8; overflow: hidden; }
+    .tug-track i { display: block; height: 100%; width: var(--tw, 100%); border-radius: 10px; background: #e0938e; transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
+    .tug-row.pat .tug-track i { background: #9dc6a8; }
+    .in-view .tug-row.rub .tug-track i { --tw: 100%; }
+    .in-view .tug-row.pat .tug-track i { --tw: 12%; }
+
+
+    /* ---------- Key-visual gallery ---------- */
+    .kv-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .kv-thumb {
+      position: relative; border-radius: 20px; overflow: hidden; cursor: zoom-in;
+      border: 1px solid var(--abnc-border); background: var(--abnc-cream);
+      box-shadow: 0 18px 40px -32px rgba(80,30,30,.5);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .kv-thumb:hover { transform: translateY(-5px); box-shadow: 0 30px 55px -34px rgba(197,43,46,.42); }
+    .kv-thumb img { width: 100%; display: block; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+    .kv-thumb:hover img { transform: scale(1.03); }
+    .kv-thumb figcaption {
+      position: absolute; left: 12px; bottom: 12px; right: 12px;
+      background: rgba(255,255,255,.9); backdrop-filter: blur(6px);
+      border-radius: 12px; padding: 8px 12px; font-size: 11.5px; font-weight: 700;
+      color: #6d615c; letter-spacing: .4px; display: flex; justify-content: space-between; gap: 8px;
+    }
+    .kv-thumb figcaption span { color: var(--abnc-red); }
+
+    /* =========================================================
+       STORYBOARDS + SCRIPTS
+       ========================================================= */
+    .sb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .sb-card {
+      background: #fff; border: 1px solid var(--abnc-border); border-radius: 26px; overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform .3s ease, box-shadow .3s ease;
+      box-shadow: 0 12px 30px -24px rgba(80,30,30,.4);
+    }
+    .sb-card:hover { box-shadow: 0 30px 60px -34px rgba(197,43,46,.3); }
+    .sb-media { position: relative; overflow: hidden; cursor: zoom-in; background: var(--abnc-cream); }
+    .sb-media img { width: 100%; display: block; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+    .sb-media:hover img { transform: scale(1.03); }
+    .sb-zoom {
+      position: absolute; right: 14px; bottom: 14px; background: rgba(20,20,20,.62); color: #fff;
+      font-size: 11px; font-weight: 600; letter-spacing: .6px; padding: 6px 12px; border-radius: 20px;
+      opacity: 0; transform: translateY(6px); transition: all .3s;
+    }
+    .sb-media:hover .sb-zoom { opacity: 1; transform: none; }
+    .sb-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 12px; }
+    .sb-top { display: flex; align-items: center; gap: 10px; }
+    .sb-code {
+      font-size: 11px; font-weight: 800; letter-spacing: 1.4px; color: #fff;
+      background: var(--abnc-red); border-radius: 20px; padding: 4px 10px;
+    }
+    .sb-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: #a0958f; }
+    .sb-body h3 { font-size: 23px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.15; }
+    .sb-hook { font-size: 14px; font-style: italic; color: #6d5f5a; }
+    .shot-list { list-style: none; display: flex; flex-direction: column; gap: 7px; margin: 2px 0 4px; }
+    .shot-list li { display: flex; gap: 10px; font-size: 13px; color: #5f5855; line-height: 1.45; }
+    .shot-list b { color: var(--abnc-red); font-weight: 800; flex: 0 0 22px; font-size: 11px; padding-top: 2px; }
+    .sb-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 6px; }
+
+    .copy-btn {
+      background: #fff; border: 1px solid var(--abnc-red);
+      color: var(--abnc-red); padding: 9px 16px; border-radius: 22px; font-size: 12.5px; font-weight: 700;
+      cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+      font-family: inherit;
+    }
+    .copy-btn:hover { background: var(--abnc-red); color: #fff; transform: scale(1.03); }
+    .copy-btn.copied { background: #2e7d32; border-color: #2e7d32; color: #fff; }
+    .copy-btn.ghost { border-color: #e0d3ce; color: #7d716c; }
+    .copy-btn.ghost:hover { background: #faf5f3; color: var(--abnc-red); border-color: var(--abnc-red); transform: none; }
+
+    /* ---------- Lightbox ---------- */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 300; background: rgba(24, 12, 10, .82);
+      display: flex; align-items: center; justify-content: center; padding: 32px;
+      opacity: 0; pointer-events: none; transition: opacity .32s ease;
+      backdrop-filter: blur(6px);
+    }
+    .lightbox.open { opacity: 1; pointer-events: auto; }
+    .lightbox img {
+      max-width: min(1100px, 92vw); max-height: 88vh; border-radius: 16px;
+      box-shadow: 0 40px 80px rgba(0,0,0,.45); transform: scale(.96); transition: transform .36s cubic-bezier(.2,.8,.2,1);
+      background: #fff;
+    }
+    .lightbox.open img { transform: scale(1); }
+    .lightbox-close {
+      position: absolute; top: 22px; right: 26px; width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(255,255,255,.16); color: #fff; border: 1px solid rgba(255,255,255,.3);
+      font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,.28); }
+    .lightbox-hint { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #f3e7e3; font-size: 12px; letter-spacing: 1px; }
+
+
+    /* =========================================================
+       SCRIPTS (new EN set)
+       ========================================================= */
+
+    .script-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .script-card {
+      background: #fff; border: 1px solid var(--abnc-border); border-radius: 24px;
+      padding: 24px 24px 20px; display: flex; flex-direction: column; gap: 14px;
+      box-shadow: 0 14px 34px -28px rgba(80,30,30,.45);
+      transition: box-shadow .3s ease, transform .3s ease;
+    }
+    .script-card:hover { transform: translateY(-3px); box-shadow: 0 28px 55px -34px rgba(197,43,46,.32); }
+    .sc-head { display: flex; gap: 14px; align-items: flex-start; }
+    .sc-num {
+      flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+      background: #fdf1ee; color: var(--abnc-red);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800;
+    }
+    .sc-head h3 { font-size: 19px; line-height: 1.25; letter-spacing: -.3px; }
+    .sc-meta { font-size: 10.5px; letter-spacing: .9px; text-transform: uppercase; color: #9a8f8b; margin-top: 5px; }
+    .sc-hook {
+      background: #fdf7f4; border-radius: 14px; padding: 12px 14px;
+      font-size: 13.5px; color: #4f4845; line-height: 1.5;
+    }
+    .sc-hook span {
+      display: block; font-size: 9.5px; letter-spacing: 1.4px; font-weight: 800;
+      color: var(--abnc-red); margin-bottom: 5px;
+    }
+    .sc-shots { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sc-shots li { display: flex; gap: 10px; font-size: 13px; color: #5c5551; line-height: 1.45; }
+    .sc-shots b { flex: 0 0 20px; font-size: 10.5px; color: var(--abnc-red); padding-top: 2px; }
+    .sc-vo { border-left: 2px solid #f0ddd6; padding-left: 14px; }
+    .sc-vo > span { font-size: 9.5px; letter-spacing: 1.4px; font-weight: 800; color: #a89d99; }
+    .sc-vo p { font-size: 13.5px; line-height: 1.65; color: #4a4442; margin-top: 6px; }
+    .sc-vo mark {
+      background: rgba(197,43,46,.09); color: #a01f22; padding: 1px 4px; border-radius: 4px;
+      font-weight: 700;
+    }
+    .sc-foot { display: flex; flex-direction: column; gap: 7px; font-size: 12.5px; color: #6f6662; }
+    .sc-foot b {
+      font-size: 9.5px; letter-spacing: 1.2px; color: #a89d99; margin-right: 6px;
+      text-transform: uppercase;
+    }
+    .sc-actions {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      margin-top: auto; padding-top: 12px; border-top: 1px dashed #eee3de;
+    }
+    .sc-board { font-size: 11.5px; color: #a89d99; }
+    .sc-board a { color: var(--abnc-red); text-decoration: none; font-weight: 700; }
+    .sc-board a:hover { text-decoration: underline; }
+
+
+    @media (max-width: 980px) {
+      .script-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .script-card { padding: 20px 18px 18px; }
+    }
+
+    /* ---------- Stats ---------- */
+    .stats-section { background: linear-gradient(135deg, #4a0f11 0%, #220708 100%); color: white; padding: 64px 0; border-radius: 30px; margin: 80px 0; }
+    .stats-grid { display: flex; flex-wrap: wrap; justify-content: space-around; text-align: center; gap: 30px; }
+    .stat-item { flex: 1 1 180px; }
+    .stat-number { font-size: 50px; font-weight: 800; color: #e0555a; line-height: 1.1; letter-spacing: -1.4px; font-variant-numeric: tabular-nums; }
+    .stat-desc { font-size: 13.5px; color: #e7cdcd; margin-top: 8px; line-height: 1.45; }
+    .stat-desc small { display: block; font-size: 11px; color: #b99393; margin-top: 3px; }
+
+    /* ---------- Before / After ---------- */
+    .ba-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .ba-intro { flex: 1 1 300px; }
+    .ba-intro h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #111; letter-spacing: -0.5px; }
+    .ba-intro p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.6; }
+    .ba-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .ba-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; }
+    .ba-points .dot { width: 8px; height: 8px; background-color: var(--abnc-red); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+    .ba-slider-container { flex: 1 1 420px; position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 45px -20px rgba(0, 0, 0, 0.2); user-select: none; touch-action: pan-y; }
+    .ba-slider { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #ddd; }
+    .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .ba-img.before { background-color: #cf8371;
+      background-image:
+        radial-gradient(circle at 24% 28%, rgba(198, 84, 74, 0.55) 0%, transparent 42%),
+        radial-gradient(circle at 72% 66%, rgba(176, 58, 52, 0.4) 0%, transparent 48%),
+        radial-gradient(rgba(112, 52, 42, 0.22) 1.5px, transparent 2px),
+        url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.14"/></svg>');
+      background-size: cover, cover, 34px 34px, 140px 140px; }
+    .ba-img.before::after { content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 46% 38%, rgba(255, 180, 160, 0.16) 0%, rgba(120, 50, 40, 0.22) 100%); }
+    .ba-img.after { background-color: #f6e2d1; background-image: radial-gradient(circle at 26% 26%, rgba(255, 255, 255, 0.85) 0%, transparent 42%), radial-gradient(circle at 74% 68%, rgba(255, 255, 255, 0.6) 0%, transparent 48%), linear-gradient(135deg, rgba(255, 245, 235, 0.9), rgba(250, 226, 205, 0.5)); clip-path: inset(0 0 0 50%); }
+    .ba-img.after::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%); }
+    .ba-label { position: absolute; top: 16px; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; z-index: 3; }
+    .ba-label.before-label { left: 16px; background: rgba(0, 0, 0, 0.4); }
+    .ba-label.after-label { right: 16px; background: var(--abnc-red); }
+    .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #ffffff; box-shadow: 0 0 12px rgba(0, 0, 0, 0.25); z-index: 4; transform: translateX(-50%); pointer-events: none; }
+    .ba-handle::after { content: '↔'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: #ffffff; border-radius: 50%; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--abnc-red); font-weight: 700; }
+    .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 5; margin: 0; touch-action: none; }
+    .ba-note { font-size: 12px; color: #a09691; margin-top: 12px; }
+
+    /* =========================================================
+       ULTRA-FIT SYSTEM
+       ========================================================= */
+    .system-section {
+      margin: 88px 0; background: linear-gradient(180deg, #f8fcf9 0%, #ffffff 100%);
+      border-radius: 30px; padding: 56px 40px; text-align: center; border: 1px solid #e6efe9;
+      position: relative; overflow: hidden;
+    }
+    .system-section h2 { font-size: 32px; font-weight: 800; color: #111; margin-bottom: 12px; letter-spacing: -0.6px; }
+    .system-section > p { font-size: 15.5px; color: #666; max-width: 660px; margin: 0 auto 40px; }
+    .system-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 980px; margin: 0 auto; }
+    .step-card {
+      background: #fff; border-radius: 22px; overflow: hidden; border: 1px solid #e8f0ea;
+      box-shadow: 0 14px 34px -26px rgba(46, 125, 50, .5); position: relative;
+      transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s;
+    }
+    .step-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -28px rgba(46,125,50,.45); }
+    .step-media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #eef6f9; }
+    .step-media img { width: 100%; height: 100%; object-fit: cover; }
+    .step-media .step-bubbles { position: absolute; inset: 0; pointer-events: none; }
+    .step-media .step-bubbles i {
+      position: absolute; bottom: -30px; border-radius: 50%;
+      background: radial-gradient(circle at 32% 28%, #fff, rgba(226,240,250,.7) 60%, rgba(170,205,232,.55));
+      animation: rise 7s linear infinite;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) scale(.6); opacity: 0; }
+      20% { opacity: .9; }
+      100% { transform: translateY(-260px) scale(1.15); opacity: 0; }
+    }
+    .step-label {
+      position: absolute; left: 12px; top: 12px; background: rgba(255,255,255,.92);
+      color: #2e7d32; font-size: 10px; font-weight: 800; letter-spacing: 1.4px;
+      padding: 5px 10px; border-radius: 20px; text-transform: uppercase;
+    }
+    .step-body { padding: 18px 20px 22px; text-align: left; }
+    .step-body h4 { font-size: 17px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.2px; }
+    .step-body p { font-size: 13.5px; color: #6a6460; line-height: 1.5; }
+    .system-foot { margin-top: 30px; font-size: 12.5px; color: #8f9a92; }
+    .system-section .sec-flow { position: absolute; left: 0; right: 0; top: 52%; height: 1px; background: linear-gradient(90deg, transparent, #d8e8dd, transparent); z-index: 0; }
+
+    /* =========================================================
+       INGREDIENTS + CHART
+       ========================================================= */
+    .ingredients-section { display: flex; flex-wrap: wrap; gap: 46px; align-items: center; margin: 88px 0; }
+    .ingredients-text { flex: 1 1 400px; }
+    .ingredient-list { list-style: none; margin-top: 22px; }
+    .ingredient-list li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+    .ingredient-list li:hover .ingredient-bullet { transform: scale(1.06); }
+    .ingredient-bullet { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 800; flex-shrink: 0; margin-top: 2px; transition: transform 0.2s; }
+    .ingredient-list strong { font-size: 15.5px; display: block; margin-bottom: 3px; color: #111; letter-spacing: -0.1px; }
+    .ingredient-list p { font-size: 13.5px; color: #666; line-height: 1.5; }
+    .ingredient-list p b { color: #3d3a38; }
+    .sub-actives { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+    .sub-actives span { font-size: 11.5px; font-weight: 600; color: #7d736e; background: #faf6f4; border: 1px solid #f0e5e0; border-radius: 20px; padding: 5px 11px; }
+
+    .ingredients-chart {
+      flex: 1 1 350px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 36px 26px; background: radial-gradient(circle at center, #ffffff 0%, #f4f9f6 100%);
+      border-radius: 30px; border: 1px solid #e6efe9; position: relative;
+      box-shadow: inset 0 0 50px rgba(46, 125, 50, 0.05), 0 10px 30px rgba(0,0,0,0.02); overflow: hidden;
+    }
+    .chart-connections { position: absolute; inset: 0; z-index: 0; opacity: 0.6; }
+    .chart-connections svg { width: 100%; height: 100%; }
+    .chart-core {
+      width: 186px; height: 186px; border-radius: 50%; background: #ffffff;
+      border: 2px solid var(--abnc-red);
+      box-shadow: 0 15px 35px rgba(197, 43, 46, 0.15), inset 0 0 20px rgba(197, 43, 46, 0.05);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; position: relative; z-index: 3; margin-bottom: 26px;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .chart-core:hover { transform: scale(1.05) translateY(-5px); }
+    .core-glow { position: absolute; width: 100%; height: 100%; border-radius: 50%; background: var(--abnc-red); filter: blur(25px); opacity: 0.15; z-index: -1; animation: pulseGlow 3s infinite alternate; }
+    @keyframes pulseGlow { 0% { transform: scale(0.9); opacity: 0.1; } 100% { transform: scale(1.1); opacity: 0.25; } }
+    .core-badge { font-size: 10px; font-weight: 800; letter-spacing: 1px; color: white; background: linear-gradient(135deg, var(--abnc-red), #e04a4d); padding: 5px 11px; border-radius: 12px; margin-bottom: 9px; box-shadow: 0 4px 10px rgba(197, 43, 46, 0.3); }
+    .chart-core h4 { font-size: 15px; margin-bottom: 4px; color: #111; font-weight: 800; }
+    .chart-core p { font-size: 11.5px; color: #666; line-height: 1.4; font-weight: 500; }
+    .chart-middle { display: flex; gap: 18px; justify-content: center; width: 100%; margin-bottom: 20px; z-index: 2; }
+    .bubble-item {
+      background: radial-gradient(circle at 30% 30%, #ffffff, rgba(240, 248, 255, 0.9) 60%, rgba(220, 235, 250, 0.8));
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: inset -5px -5px 15px rgba(255,255,255,0.9), inset 5px 5px 15px rgba(0, 0, 0, 0.03), 0 10px 25px rgba(0, 0, 0, 0.06), 0 0 20px rgba(200, 225, 250, 0.4);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative;
+    }
+    .bubble-item::before { content: ''; position: absolute; top: 15%; left: 20%; width: 30%; height: 20%; background: #ffffff; border-radius: 50%; filter: blur(2px); opacity: 0.8; transform: rotate(-45deg); }
+    .bubble-item:hover { transform: translateY(-8px) scale(1.05); box-shadow: inset -5px -5px 15px rgba(255,255,255,0.9), inset 5px 5px 15px rgba(0, 0, 0, 0.03), 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 30px rgba(200, 225, 250, 0.6); }
+    .chart-middle .bubble-item { width: 122px; height: 122px; }
+    .bubble-content strong { display: block; font-size: 10.5px; color: #1a1a1a; margin-bottom: 2px; z-index: 1; position: relative; }
+    .bubble-content span { font-size: 9.5px; color: #2e7d32; font-weight: 600; z-index: 1; position: relative; }
+    .bubble-large { width: 100%; max-width: 300px; height: 76px; border-radius: 50px; background: radial-gradient(ellipse at 30% 20%, #ffffff, rgba(227, 242, 253, 0.9) 60%, rgba(200, 230, 250, 0.8)); border: 1px solid rgba(187, 222, 251, 0.6); }
+    .bubble-large .bubble-content strong { font-size: 12.5px; color: #1565c0; }
+    .bubble-large .bubble-content span { font-size: 10.5px; color: #555; }
+
+    /* =========================================================
+       MOODBOARD
+       ========================================================= */
+    .moodboard-section { text-align: center; margin: 88px 0; position: relative; }
+    .swipe-hint { display: none; font-size: 13px; color: #888; margin-bottom: 16px; animation: pulseHint 1.5s infinite alternate; }
+    @keyframes pulseHint { 0% { opacity: 0.5; } 100% { opacity: 1; } }
+    .moodboard-container { position: relative; width: 100%; max-width: 920px; margin: 0 auto; padding: 20px 0; }
+    .moodboard-track { display: flex; justify-content: center; align-items: center; height: 300px; position: relative; }
+    .bounce-card {
+      width: 190px; height: 254px; border-radius: 20px; border: 6px solid #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15); overflow: hidden; position: absolute;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;
+      background: #f0f0f0; display: flex; align-items: center; justify-content: center;
+    }
+    .bounce-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .bounce-card.product-card { background: radial-gradient(circle at 50% 35%, #fff, #f8ece7 70%); }
+    .bounce-card.product-card img { object-fit: contain; padding: 16px; }
+    @media (min-width: 769px) {
+      .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-170px, 10px); z-index: 1; }
+      .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-85px, 0px); z-index: 2; }
+      .bounce-card:nth-child(3) { transform: rotate(0deg) translate(0px, -10px); z-index: 3; }
+      .bounce-card:nth-child(4) { transform: rotate(7deg) translate(85px, 0px); z-index: 2; }
+      .bounce-card:nth-child(5) { transform: rotate(15deg) translate(170px, 10px); z-index: 1; }
+      .bounce-card:hover { transform: translate(0, -30px) scale(1.15) rotate(0deg) !important; z-index: 10 !important; box-shadow: 0 25px 45px rgba(197, 43, 46, 0.25); border-color: var(--abnc-red); }
+    }
+    @media (max-width: 768px) {
+      .swipe-hint { display: block; }
+      .moodboard-track { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; padding: 10px 24px 30px 24px; margin: 0 -24px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .moodboard-track::-webkit-scrollbar { display: none; }
+      .bounce-card { position: relative; width: 220px; height: 293px; flex-shrink: 0; margin-right: 16px; scroll-snap-align: center; transform: none !important; }
+      .bounce-card:last-child { margin-right: 24px; }
+    }
+
+    /* =========================================================
+       CLAIM-SAFE
+       ========================================================= */
+    .claim-section { background: var(--abnc-cream); border-radius: 30px; padding: 48px 40px; margin: 88px 0; border: 1px solid #f2e4de; }
+    .claim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 8px; }
+    .claim-col { background: #fff; border-radius: 20px; padding: 22px 24px; border: 1px solid #efe4df; }
+    .claim-col h4 { font-size: 13px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .claim-col.yes h4 { color: #2e7d32; }
+    .claim-col.no h4 { color: #b03a34; }
+    .claim-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .claim-col li { font-size: 13.5px; color: #57504d; line-height: 1.45; padding-left: 18px; position: relative; }
+    .claim-col li::before { position: absolute; left: 0; top: 0; font-weight: 800; font-size: 13px; }
+    .claim-col.yes li::before { content: '✓'; color: #4c9a56; }
+    .claim-col.no li::before { content: '✕'; color: #c56a63; }
+    .claim-foot { font-size: 11.5px; color: #91867f; margin-top: 20px; line-height: 1.55; }
+
+    /* =========================================================
+       CAPTION KIT
+       ========================================================= */
+    .kit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .kit-card { background: #fff; border: 1px solid var(--abnc-border); border-radius: 20px; padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; transition: box-shadow .3s, transform .3s; }
+    .kit-card:hover { box-shadow: 0 20px 40px -30px rgba(80,30,30,.4); transform: translateY(-3px); }
+    .kit-card h5 { font-size: 11px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--abnc-red); }
+    .kit-card p { font-size: 13.5px; color: #5c5551; line-height: 1.55; flex: 1; }
+    .kit-hashtags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .kit-hashtags span { font-size: 12px; font-weight: 600; color: #7d716c; background: #faf6f4; border: 1px solid #f0e5e0; border-radius: 20px; padding: 6px 12px; }
+
+    /* ---------- Clinical table ---------- */
+    .clinical-table { width: 100%; border-collapse: collapse; margin: 26px 0 10px; font-size: 13.5px; }
+    .clinical-table th { text-align: left; padding: 15px 12px; background-color: #f7f4f3; font-weight: 700; color: #333; border-bottom: 2px solid var(--abnc-border); font-size: 12px; letter-spacing: .4px; text-transform: uppercase; }
+    .clinical-table td { padding: 15px 12px; border-bottom: 1px solid var(--abnc-border); color: #4a4442; vertical-align: top; }
+    .clinical-table tr:hover td { background-color: #fcfaf9; }
+    .clinical-note { font-size: 12px; color: #9a908b; line-height: 1.6; }
+
+    /* ---------- Contact / Footer ---------- */
+    .contact-section { background-color: var(--abnc-light-gray); padding: 56px 0; border-radius: 30px; margin: 80px 0; text-align: center; }
+    .contact-section h2 { font-size: 32px; font-weight: 800; margin-bottom: 14px; color: #111; letter-spacing: -.6px; }
+    .contact-section p { font-size: 15.5px; color: #555; margin-bottom: 26px; }
+    .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px; margin-top: 20px; }
+    .contact-item { font-size: 15.5px; }
+    .contact-item a { color: var(--abnc-red); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    .contact-item a:hover { border-bottom-color: var(--abnc-red); }
+    .footer { border-top: 1px solid var(--abnc-border); padding: 38px 0; margin-top: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 13.5px; color: #777; }
+    .footer-links { display: flex; gap: 22px; }
+    .footer-links a { color: #777; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--abnc-red); }
+
+    @media (max-width: 980px) {
+      .sp-grid { grid-template-columns: 1fr; }
+      .sb-grid { grid-template-columns: 1fr; }
+      .kit-grid { grid-template-columns: 1fr; }
+      .claim-grid { grid-template-columns: 1fr; }
+      .system-steps { grid-template-columns: 1fr; }
+      .sp-visual { aspect-ratio: 16 / 11; }
+    }
+    @media (max-width: 768px) {
+      .hero-title { font-size: 34px; }
+      .navbar { flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+      .stat-number { font-size: 38px; }
+      .section-title { font-size: 27px; }
+      .clinical-table { font-size: 11.5px; }
+      .clinical-table th, .clinical-table td { padding: 10px 6px; }
+      .ba-wrapper { flex-direction: column; align-items: stretch; }
+      .ba-slider-container { flex: 0 0 auto; width: 100%; }
+      .info-item { flex: 1 1 42%; }
+      .sticky-checklist { flex-direction: column; gap: 5px; padding: 10px; font-size: 11px; }
+      .hero { padding: 36px 20px; }
+      .system-section { padding: 36px 18px; }
+      .claim-section { padding: 32px 20px; }
+      .product-stage { max-width: 300px; }
+      .sp-body { padding: 20px; }
+      .kv-row { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+                padding-bottom: 10px; margin: 0 -24px; padding-left: 24px; padding-right: 24px;
+                scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+      .kv-row::-webkit-scrollbar { display: none; }
+      .kv-thumb { flex: 0 0 74%; scroll-snap-align: center; }
+      .kv-thumb figcaption { font-size: 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+
+  <style>
+    /* ---------- 2026.11 compaction ---------- */
+    .sec { margin: 64px 0; }
+    .section-sub { margin-bottom: 26px; }
+    .sp-body { padding: 20px 20px 22px; gap: 10px; }
+    .sp-body h3 { font-size: 20px; }
+    .sp-points li { font-size: 13px; }
+    .script-card { padding: 20px 20px 16px; gap: 12px; }
+    .sc-head h3 { font-size: 18px; }
+    .sc-shots li { font-size: 12.5px; }
+    .sc-vo p { font-size: 13px; }
+    .sc-why {
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 13px; font-weight: 600; color: #8a1f22; line-height: 1.45;
+      background: #fff7f4; border-radius: 10px; padding: 9px 12px;
+    }
+    .sc-why b {
+      flex: 0 0 auto; font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase;
+      color: #c08b83; padding-top: 3px;
+    }
+    .stats-section { margin: 22px 0 36px; padding: 42px 0; border-radius: 24px; }
+    .claim-section { margin: 64px 0; padding: 40px 36px; }
+    .moodboard-section, .ingredients-section, .system-section { margin: 64px 0; }
+    .kit-grid { margin-top: 22px; }
+    .cover-strip-wrap { margin: 26px 0 0; }
+    .cover-strip-wrap .cap { font-size: 11px; letter-spacing: .8px; text-transform: uppercase; color: #a89d99; margin-bottom: 10px; }
+    .cover-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .cover-strip figure {
+      margin: 0; border-radius: 14px; overflow: hidden; cursor: zoom-in;
+      border: 1px solid var(--abnc-border); background: var(--abnc-cream);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .cover-strip figure:hover { transform: translateY(-3px); box-shadow: 0 18px 30px -24px rgba(197,43,46,.45); }
+    .cover-strip img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 100%; }
+    .sb-body.compact { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; }
+    .sb-body.compact .sb-actions { margin: 0; padding: 0; border: 0; }
+    @media (max-width: 640px) {
+      .sc-why { font-size: 12.5px; }
+      .cover-strip { grid-template-columns: 1fr 1fr; }
+    }
+
+
+    #proof .stat-number { color: var(--abnc-red); }
+    #proof .stat-desc { color: #7a716d; }
+    #proof .stat-desc small { color: #a19691; }
+    #proof .stats-grid { padding: 6px 0 22px; border-bottom: 1px solid var(--abnc-border); }
+
+    /* ---------- selling points v2 (2 core + support + audiences) ---------- */
+    .sp-grid.two { grid-template-columns: 1fr 1fr; }
+    .sp-card .sp-visual { aspect-ratio: 16 / 11; }
+    .sp-note {
+      font-size: 11.5px; color: #a19691; line-height: 1.45;
+      border-top: 1px dashed #eee3de; padding-top: 9px; margin-top: 2px;
+    }
+    .support-block {
+      margin-top: 24px; background: #fff; border: 1px solid var(--abnc-border);
+      border-radius: 22px; padding: 22px 24px 20px;
+    }
+    .support-head {
+      font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase;
+      color: var(--abnc-red); font-weight: 800; margin-bottom: 14px;
+    }
+    .support-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .support-item h4 { font-size: 13.5px; line-height: 1.3; margin-bottom: 6px; }
+    .support-item p { font-size: 12px; color: #6b625f; line-height: 1.5; }
+    .audience-head {
+      font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase;
+      color: #a19691; font-weight: 800; margin: 22px 0 10px;
+    }
+    .audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .aud {
+      background: #fdf9f7; border: 1px solid #f1e5df; border-radius: 14px;
+      padding: 10px 13px; display: flex; flex-direction: column; gap: 2px;
+    }
+    .aud b { font-size: 9.5px; letter-spacing: 1px; color: var(--abnc-red); }
+    .aud span { font-size: 12.5px; font-weight: 700; color: #3f3936; }
+    .aud em { font-style: normal; font-size: 11px; color: #8a7f7b; line-height: 1.35; }
+    @media (max-width: 980px) {
+      .sp-grid.two { grid-template-columns: 1fr; }
+      .support-grid { grid-template-columns: 1fr 1fr; }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .support-grid { grid-template-columns: 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
+    }
+    /* ---------- vertical compaction ---------- */
+    .hero { padding: 46px 34px; }
+    .system-section { padding: 42px 32px; }
+    .step-media { aspect-ratio: 4 / 3; }
+    .step-body { padding: 15px 18px 18px; }
+    .system-steps { gap: 18px; }
+    .ingredients-chart { padding: 26px 20px; }
+    .chart-core { width: 158px; height: 158px; margin-bottom: 20px; }
+    .chart-middle .bubble-item { width: 104px; height: 104px; }
+    .bubble-large { height: 66px; }
+    .claim-col { padding: 18px 20px; }
+    .claim-col li { font-size: 13px; }
+    .footer { margin-top: 36px; padding: 30px 0; }
+    @media (min-width: 769px) {
+      .moodboard-track { height: 250px; }
+      .bounce-card { width: 172px; height: 230px; }
+      .bounce-card:nth-child(1) { transform: rotate(-15deg) translate(-150px, 10px); }
+      .bounce-card:nth-child(2) { transform: rotate(-7deg) translate(-76px, 0px); }
+      .bounce-card:nth-child(3) { transform: rotate(0deg) translate(0px, -8px); }
+      .bounce-card:nth-child(4) { transform: rotate(7deg) translate(76px, 0px); }
+      .bounce-card:nth-child(5) { transform: rotate(15deg) translate(150px, 10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="read-progress" id="readProgress"></div>
+  <div class="top-bar"></div>
+
+  <div class="container">
+
+    <!-- 导航 -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="logo">ABN<span>°C</span></a>
+      <div class="nav-links">
+        <a href="#why">Why It Sells</a>
+        <a href="#scripts">Scripts</a>
+        <a href="#boards">Boards</a>
+        <a href="#proof">Proof</a>
+        <a href="#clinical">Clinical</a>
+        <a href="#contact" class="contact-btn">Contact</a>
+      </div>
+    </nav>
+
+    <!-- 醒目吸顶提醒 -->
+    <div class="sticky-checklist">
+      <div>Before You Post: Add <span>#ABNC</span> & <span>#KBeauty</span></div>
+      <div>Tag <span>@abnc_official</span></div>
+      <div>Attach <span>affiliate link</span></div>
+      <div>Show product <span>clearly</span></div>
+      <div>Say <span>helps</span>, never <span>cures</span></div>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas id="cursor-grid-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+
+      <div class="hero-text" style="position: relative; z-index: 2;">
+        <span class="hero-badge"><i></i>New positioning · 2026.10</span>
+        <h1 class="hero-title">
+          <small>C³ CARE</small>
+          CICA BUBBLE<br>
+          <span class="accent">SERUM</span>
+        </h1>
+        <p class="hero-subtitle">
+          A micro-foam essence for oily, pore-prone, dehydrated sensitive skin.
+          One pump hydrates, soothes and balances — then your base goes on smooth.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">#SkinPrep</span>
+          <span class="tag">#CicaBubbleSerum</span>
+          <span class="tag">#CombinationSkin</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#why" class="btn-primary">See the 3 selling points</a>
+          <a href="#scripts" class="btn-outline">Grab the scripts</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="product-stage" id="productStage" role="button" tabindex="0" aria-label="Tap to pump the foam serum">
+          <div class="stage-glow"></div>
+          <div class="stage-ring"></div>
+          <div class="stage-bubbles" aria-hidden="true">
+            <i style="width:46px;height:46px;left:6%;top:22%;animation-delay:-1.2s"></i>
+            <i style="width:26px;height:26px;left:16%;top:58%;animation-delay:-3s"></i>
+            <i style="width:64px;height:64px;right:4%;top:34%;animation-delay:-2.1s"></i>
+            <i style="width:18px;height:18px;right:18%;top:70%;animation-delay:-.6s"></i>
+          </div>
+          <img src="img/abnc-cica-bubble-serum-cutout.png" alt="ABN°C CICA BUBBLE SERUM bottle" class="hero-product" id="heroProduct">
+          <div class="pump-counter" id="pumpCounter">Tap the bottle · <b>0</b> pump</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INFO BAR ============ -->
+    <div class="info-bar fade-in">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item"><div class="info-label">Format</div><div class="info-value">Micro-foam essence<span>Prefill-free pump</span></div></div>
+          <div class="info-item"><div class="info-label">Volume</div><div class="info-value">100 ml<span>3.38 fl. oz.</span></div></div>
+          <div class="info-item"><div class="info-label">Habit</div><div class="info-value">Pre-makeup + daily<span>AM / PM, 1–2 pumps</span></div></div>
+          <div class="info-item"><div class="info-label">Skin Type</div><div class="info-value">Oily · combo<span>Sensitive-friendly</span></div></div>
+          <div class="info-item"><div class="info-label">Shelf Life</div><div class="info-value">36 mo.<span>12 mo. after opening</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SELLING POINTS ============ -->
+    <section id="why" class="sec">
+      <div class="fade-in">
+        <div class="eyebrow">The selling points</div>
+        <h2 class="section-title">Two selling points to lead with.</h2>
+        <p class="section-sub">Lead with the pre-makeup job or the light application, then bring in one or two supporting care benefits. Both come straight from the product brief.</p>
+      </div>
+
+      <div class="sp-grid two">
+
+        <article class="sp-card fade-in tilt-card">
+          <div class="sp-visual">
+            <span class="sp-num">01</span>
+            <img src="img/abnc-sellingpoint-01-premakeup.jpg" alt="Pre-makeup 3-in-1 key visual" loading="lazy">
+          </div>
+          <div class="sp-body">
+            <h3>Pre-Makeup 3-in-1</h3>
+            <p class="lede">Hydration, oil &amp; pore care and soothing barrier care in one prep step, right before foundation.</p>
+            <ul class="sp-points">
+              <li><span>Replaces the toner–serum–primer stack, so the base goes on one prepared layer.</span></li>
+              <li><span>Built for the cakey nose and dry cheeks of a rushed morning.</span></li>
+            </ul>
+            <div class="mini-widget ow-widget">
+              <div class="ow-row"><span>Oil</span><div class="ow-track"><i class="oil" style="--w:74%"></i></div></div>
+              <div class="ow-row"><span>Water</span><div class="ow-track"><i class="water" style="--w:26%"></i></div></div>
+            </div>
+            <div class="sp-scenarios">
+              <span>Rush-hour base</span><span>Oily-combination</span>
+            </div>
+            <p class="sp-note">Add cream only if your skin needs it — and keep SPF in the daytime.</p>
+          </div>
+        </article>
+
+        <article class="sp-card fade-in tilt-card">
+          <div class="sp-visual">
+            <span class="sp-num">02</span>
+            <img src="img/abnc-sellingpoint-03-bubble-texture.jpg" alt="Light foam application key visual" loading="lazy">
+          </div>
+          <div class="sp-body">
+            <h3>Light on Skin, No Back-and-Forth</h3>
+            <p class="lede">Fine foam spreads into an essence layer — press or glide with fingertips, no repeated rubbing.</p>
+            <ul class="sp-points">
+              <li><span>Comfortable on tight, redness-prone skin that dislikes being rubbed.</span></li>
+              <li><span>Show the real glide and hand movement — don’t dramatise pulling at the skin.</span></li>
+            </ul>
+            <div class="mini-widget">
+              <div class="tug-row rub"><b>Rubbing</b><div class="tug-track"><i style="--tw:100%"></i></div></div>
+              <div class="tug-row pat"><b>Foam press</b><div class="tug-track"><i style="--tw:12%"></i></div></div>
+            </div>
+            <div class="sp-scenarios">
+              <span>Sensitive-skin days</span><span>Texture / ASMR</span>
+            </div>
+            <p class="sp-note">Describe the real feel — no zero-friction or zero-irritation promise.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="support-block fade-in">
+        <div class="support-head">Supporting care benefits · bring in one or two</div>
+        <div class="support-grid">
+          <div class="support-item">
+            <h4>Soothing, redness-prone skin</h4>
+            <p>Cica, guaiazulene and tea tree in a liposome blend. Talk about the look of temporary redness and comfort when skin feels dry and tight.</p>
+          </div>
+          <div class="support-item">
+            <h4>Hydration &amp; barrier</h4>
+            <p>11 hyaluronic acids, fructan and panthenol for water; 5 ceramides with cholesterol for the barrier. Soft, comfortable finish.</p>
+          </div>
+          <div class="support-item">
+            <h4>Oil &amp; pore appearance</h4>
+            <p>Anti Sebum P and Anti-Pore S. Record over time, in the same light — never “pores disappear”.</p>
+          </div>
+          <div class="support-item">
+            <h4>Look, texture, scent</h4>
+            <p>Minimal white bottle with red type, fine white foam, light citrus. Describe what you actually smell and feel.</p>
+          </div>
+        </div>
+
+        <div class="audience-head">Who it’s for · pick the one you actually are</div>
+        <div class="audience-grid">
+          <div class="aud"><b>01</b><span>Sensitive &amp; redness-prone</span><em>Evening light care, sensitive-week prep</em></div>
+          <div class="aud"><b>02</b><span>Oily &amp; pore-focused</span><em>Morning care, midday shine check</em></div>
+          <div class="aud"><b>03</b><span>Combination &amp; dehydrated</span><em>AC office, seasonal change</em></div>
+          <div class="aud"><b>04</b><span>Makeup &amp; running late</span><em>Commute base, date night</em></div>
+          <div class="aud"><b>05</b><span>Travel &amp; flights</span><em>Wash bag, hotel sink, next-day base</em></div>
+          <div class="aud"><b>06</b><span>Low-effort routine</span><em>Low-energy night, quick morning</em></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cover-strip-wrap fade-in">
+      <p class="cap">Cover kit — tap to open full size</p>
+      <div class="cover-strip">
+        <figure data-lightbox="img/abnc-sellingpoint-01-premakeup.jpg" data-caption="Cover 01 — Pre-makeup 3-in-1">
+          <img src="img/abnc-sellingpoint-01-premakeup.jpg" alt="Cover 01 pre-makeup 3-in-1" loading="lazy">
+        </figure>
+        <figure data-lightbox="img/abnc-sellingpoint-03-bubble-texture.jpg" data-caption="Cover 03 — Foam, not friction">
+          <img src="img/abnc-sellingpoint-03-bubble-texture.jpg" alt="Cover 03 foam not friction" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <section id="scripts" class="sec">
+      <div class="fade-in">
+        <div class="eyebrow">4 scripts · English · ready to film</div>
+        <h2 class="section-title">Pick a script. Film it in four shots.</h2>
+        <p class="section-sub">Selling point first, script second. Four angles, four hooks, four claim-safe CTAs — copy one and film.</p>
+      </div>
+
+      
+
+      <div class="script-grid">
+
+        <article class="script-card fade-in">
+          <header class="sc-head">
+            <span class="sc-num">01</span>
+            <div>
+              <h3>Minimal Morning · One Step Instead of Toner + Lotion</h3>
+              <p class="sc-meta">0–25s · bathroom light · talking head + macro</p>
+            </div>
+          </header>
+          <div class="sc-why"><b>Selling point</b>Minimal routine · replaces toner + lightweight lotion · sensitive-friendly · fast absorption.</div>
+          <div class="sc-hook"><span>Hook · 0–3s</span>“#ad Minimal morning skincare — skip toner and lightweight moisturizer.”</div>
+          <ol class="sc-shots">
+            <li><b>01</b><span>Freshly cleansed, bare face.</span></li>
+            <li><b>02</b><span>One pump; macro on the fluffy foam. Mic close for the bubble-crackle sound.</span></li>
+            <li><b>03</b><span>Press the foam in — don’t rub — and watch it melt on the skin.</span></li>
+            <li><b>04</b><span>Touch the finished face, show zero stickiness, go straight in with SPF or base.</span></li>
+          </ol>
+          <div class="sc-vo">
+            <span>Voiceover</span>
+            <p>“I hate stacking too many layers first thing in the morning. This cica bubble serum is my <mark>one-step shortcut</mark>. Soft foam melts right into skin, <mark>zero sticky residue</mark>. Centella <mark>soothes my skin</mark>, feels gentle even on sensitive days. <mark>No heavy film</mark> left behind — perfect base before sunscreen or foundation.”</p>
+          </div>
+          <div class="sc-foot">
+            <div><b>CTA</b>Grab it in my TikTok Shop yellow basket.</div>
+            
+          </div>
+          <div class="sc-actions">
+            <button class="copy-btn" data-script="#ad Minimal morning skincare - skip toner and lightweight moisturizer.
+
+SHOTS
+1. Freshly cleansed, bare face.
+2. One pump, macro on the fluffy foam. Mic close for the bubble-crackle sound.
+3. Press the foam in - do not rub - and watch it melt on the skin.
+4. Touch the finished face, show zero stickiness, go straight in with SPF or base.
+
+VOICEOVER
+I hate stacking too many layers first thing in the morning. This cica bubble serum is my one-step shortcut.
+Soft foam melts right into skin, zero sticky residue. Centella soothes my skin, feels gentle even on sensitive days.
+No heavy film left behind, perfect base before sunscreen or foundation.
+
+CTA: Grab it in my TikTok Shop yellow basket.
+
+KEY POINT: minimal routine, replaces toner + lightweight moisturizer, sensitive-friendly, fast absorption.
+NOTE: tag #ad / #ABNCpartner. Say looks soothed, never treats. Patch-test first if you have very sensitive skin.">📋 Copy full script</button>
+            <span class="sc-board">Board pattern → <a href="#boards">B02 · Less steps</a></span>
+          </div>
+        </article>
+
+        <article class="script-card fade-in">
+          <header class="sc-head">
+            <span class="sc-num">02</span>
+            <div>
+              <h3>Pre-Makeup Base · Fix Mid-Day Patchiness</h3>
+              <p class="sc-meta">0–30s · vanity light · before / after base</p>
+            </div>
+          </header>
+          <div class="sc-why"><b>Selling point</b>Pre-makeup prep · no pilling · less patchy, cakey base · no greasy residue.</div>
+          <div class="sc-hook"><span>Hook · 0–3s</span>“#ad Why my foundation stops looking patchy mid-day.”</div>
+          <ol class="sc-shots">
+            <li><b>01</b><span>Show the dry, cake-prone nose and cheeks.</span></li>
+            <li><b>02</b><span>Pump the foam, press it in until absorbed, wait 30–45s to set.</span></li>
+            <li><b>03</b><span>Buff foundation in with a damp sponge, finish the base.</span></li>
+            <li><b>04</b><span>Edit: base right after application vs. 4 hours later — no touch-ups.</span></li>
+          </ol>
+          <div class="sc-vo">
+            <span>Voiceover</span>
+            <p>“Dry texture under makeup makes foundation catch and <mark>patch</mark>. I use this bubble serum as my prep step. The foam <mark>sinks in fast</mark>, it <mark>does not pill or ball</mark> under base makeup. It gives <mark>soft hydration without greasiness</mark>, so my foundation sits smooth for hours.”</p>
+          </div>
+          <div class="sc-foot">
+            <div><b>CTA</b>Link in my shop showcase.</div>
+            
+          </div>
+          <div class="sc-actions">
+            <button class="copy-btn" data-script="#ad Why my foundation stops looking patchy mid-day.
+
+SHOTS
+1. Show the dry, cake-prone nose and cheeks.
+2. Pump the foam, press it in until absorbed, wait 30-45 seconds to set.
+3. Buff foundation in with a damp sponge, finish the base.
+4. Edit: base right after application vs. 4 hours later - no touch-ups.
+
+VOICEOVER
+Dry texture under makeup makes foundation catch and patch. I use this bubble serum as my prep step.
+The foam sinks in fast, it does not pill or ball under base makeup.
+It gives soft hydration without greasiness, so my foundation sits smooth for hours.
+
+CTA: Link in my shop showcase.
+
+KEY POINT: pre-makeup prep, no pilling, less patchy and cakey base, no greasy residue.
+NOTE: tag #ad / #ABNCpartner. Show the 30-45 second set time honestly. Patch-test first if you have very sensitive skin.">📋 Copy full script</button>
+            <span class="sc-board">Board pattern → <a href="#boards">B01 · Pre-makeup 3-in-1</a></span>
+          </div>
+        </article>
+
+        <article class="script-card fade-in">
+          <header class="sc-head">
+            <span class="sc-num">03</span>
+            <div>
+              <h3>Late-Night Calming · Stressed, Irritated-Looking Skin</h3>
+              <p class="sc-meta">0–28s · natural light · close-up + soft reveal</p>
+            </div>
+          </header>
+          <div class="sc-why"><b>Selling point</b>Visually calms stressed skin · works alone or layered under mask / cream.</div>
+          <div class="sc-hook"><span>Hook · 0–3s</span>“#ad My go-to for late-night stressed, irritated-looking skin.”</div>
+          <ol class="sc-shots">
+            <li><b>01</b><span>Bare face in daylight after a late night — redness, slight roughness.</span></li>
+            <li><b>02</b><span>Pump the foam, macro on it, then press gently over the flushed areas.</span></li>
+            <li><b>03</b><span>Let it absorb; show the soft glow and your hand — no sticky feel.</span></li>
+          </ol>
+          <div class="sc-vo">
+            <span>Voiceover</span>
+            <p>“Late nights and screen-stressed skin can look <mark>red and uneven</mark>. I reach for this cica bubble serum in my night routine. Light bubbly texture, centella helps <mark>calm the look of irritation</mark>. It feels soothing, <mark>never heavy</mark> on my face. It works great alone, or you can layer it under a mask or cream for extra care. Everyone’s skin reacts differently — <mark>always patch-test</mark> if you have super-sensitive skin.”</p>
+          </div>
+          <div class="sc-foot">
+            <div><b>CTA</b>Tap the yellow basket for product details.</div>
+            
+          </div>
+          <div class="sc-actions">
+            <button class="copy-btn" data-script="#ad My go-to for late-night stressed, irritated-looking skin.
+
+SHOTS
+1. Bare face in daylight after a late night - redness, slight roughness.
+2. Pump the foam, macro on it, then press gently over the flushed areas.
+3. Let it absorb; show the soft glow and your hand - no sticky feel.
+
+VOICEOVER
+Late nights and screen-stressed skin can look red and uneven. I reach for this cica bubble serum in my night routine.
+Light bubbly texture, centella helps calm the look of irritation. It feels soothing, never heavy on my face.
+It works great alone, or you can layer it under a mask or cream for extra care.
+Everyone's skin reacts differently - always patch-test if you have super-sensitive skin.
+
+CTA: Tap the yellow basket for product details.
+
+KEY POINT: visually calms stressed skin, works alone or layered under mask or cream.
+NOTE: tag #ad / #ABNCpartner. Only visual language: looks calmer, looks soothed. Never treat or cure redness.">📋 Copy full script</button>
+            <span class="sc-board">Board pattern → <a href="#boards">B04 · ASMR foam</a></span>
+          </div>
+        </article>
+
+        <article class="script-card fade-in">
+          <header class="sc-head">
+            <span class="sc-num">04</span>
+            <div>
+              <h3>Oily-Combination Summer · Light, Non-Sticky Hydration</h3>
+              <p class="sc-meta">0–26s · window light · T-zone + matte finish</p>
+            </div>
+          </header>
+          <div class="sc-why"><b>Selling point</b>Oily / summer friendly · hydration without heaviness · post-sun quick calming.</div>
+          <div class="sc-hook"><span>Hook · 0–3s</span>“#ad Oily-combination skin hates heavy moisturizers? Try this bubble serum.”</div>
+          <ol class="sc-shots">
+            <li><b>01</b><span>T-zone shine, breakout-prone face; blot with an oil-control sheet.</span></li>
+            <li><b>02</b><span>Pump the foam; press and let it melt into the skin.</span></li>
+            <li><b>03</b><span>Back of hand to cheek — nothing sticks. Show the soft matte glow.</span></li>
+          </ol>
+          <div class="sc-vo">
+            <span>Voiceover</span>
+            <p>“When it’s warm out, thick serums and lotions make my T-zone <mark>greasy</mark>. This cica bubble serum delivers hydration in light foam form. It <mark>hydrates without weighing skin down</mark>. It won’t leave that <mark>sticky layer</mark> that can trigger extra shine. Great for combination skin on hot days — gentle formula, works well as a <mark>post-sun calming step</mark> too.”</p>
+          </div>
+          <div class="sc-foot">
+            <div><b>CTA</b>Check my TikTok Shop for this bubble serum.</div>
+            
+          </div>
+          <div class="sc-actions">
+            <button class="copy-btn" data-script="#ad Oily-combination skin hates heavy moisturizers? Try this bubble serum.
+
+SHOTS
+1. T-zone shine, breakout-prone face; blot with an oil-control sheet.
+2. Pump the foam; press and let it melt into the skin.
+3. Back of hand to cheek - nothing sticks. Show the soft matte glow.
+
+VOICEOVER
+When it's warm out, thick serums and lotions make my T-zone greasy. This cica bubble serum delivers hydration in light foam form.
+It hydrates without weighing skin down. It won't leave that sticky layer that can trigger extra shine.
+Great for combination skin on hot days - gentle formula, works well as a post-sun calming step too.
+
+CTA: Check my TikTok Shop for this bubble serum.
+
+KEY POINT: oily and summer friendly, hydration without heaviness, post-sun quick calming.
+NOTE: tag #ad / #ABNCpartner. Say hydrates and looks calmer - never treats breakouts. Patch-test first if you have very sensitive skin.">📋 Copy full script</button>
+            <span class="sc-board">Board pattern → <a href="#boards">B03 · Foam texture</a></span>
+          </div>
+        </article>
+
+      </div>
+
+      
+    </section>
+
+    <!-- ============ BOARDS ============ -->
+    <section id="boards" class="sec">
+      <div class="fade-in">
+        <div class="eyebrow">Filming patterns</div>
+        <h2 class="section-title">Four 4-shot boards you can copy</h2>
+        <p class="section-sub">Tap a board to zoom. Pair it with the script that fits your angle.</p>
+      </div>
+      <div class="sb-grid">
+<article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-storyboard-01-premakeup.jpg" data-caption="B01 · Pre-makeup 3-in-1 storyboard">
+            <img src="img/abnc-storyboard-01-premakeup.jpg" alt="B01 pre-makeup 3-in-1 four-shot storyboard" loading="lazy">
+            <span class="sb-zoom">Click to zoom</span>
+          </div>
+          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B01</span><span class="sb-tag">Pre-makeup · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B01 PRE-MAKEUP 3-IN-1
+1. CU · bare skin, 7:12 AM (oily outside / tight inside)
+2. MACRO · one pump, foam holds its shape (sound on)
+3. CU · pat it in, melts in 10 sec, no rubbing
+4. SPLIT · same foundation, patchy vs. seamless
+Timing: 0-4 / 4-9 / 9-15 / 15-23 / 23-27s">Copy shot list</button></div></div>
+        </article>
+
+<article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-storyboard-02-minimal-routine.jpg" data-caption="B02 · Minimal routine storyboard">
+            <img src="img/abnc-storyboard-02-minimal-routine.jpg" alt="B02 minimal routine four-shot storyboard" loading="lazy">
+            <span class="sb-zoom">Click to zoom</span>
+          </div>
+          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B02</span><span class="sb-tag">Minimal routine · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B02 LESS STEPS, MORE RESULTS
+1. WIDE · the 5-bottle shelf
+2. MED · sweep them away, keep one
+3. CU · one bottle, three jobs
+4. TIMELAPSE · 12 min to 3 min
+Timing: 0-5 / 5-9 / 9-16 / 16-23 / 23-27s">Copy shot list</button></div></div>
+        </article>
+
+<article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-storyboard-03-bubble-texture.jpg" data-caption="B03 · Foam texture storyboard">
+            <img src="img/abnc-storyboard-03-bubble-texture.jpg" alt="B03 bubble texture four-shot storyboard" loading="lazy">
+            <span class="sb-zoom">Click to zoom</span>
+          </div>
+          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B03</span><span class="sb-tag">Texture · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B03 FOAM, NOT FRICTION
+1. MACRO · foam dome from the pump (sound on)
+2. CU · melts on contact, no rubbing
+3. CU · zero-tug test (drag vs pat)
+4. CU · blotting paper, no stickiness
+Timing: 0-5 / 5-10 / 10-16 / 16-23 / 23-27s">Copy shot list</button></div></div>
+        </article>
+
+<article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-storyboard-04-asmr-foam.jpg" data-caption="B04 · ASMR foam storyboard">
+            <img src="img/abnc-storyboard-04-asmr-foam.jpg" alt="B04 ASMR foam four-shot storyboard" loading="lazy">
+            <span class="sb-zoom">Click to zoom</span>
+          </div>
+          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B04</span><span class="sb-tag">ASMR · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B04 ASMR FOAM CLOUD
+1. MACRO · pump hiss (no talking)
+2. MACRO · foam doming out
+3. CU · bubbles popping into essence
+4. MED · half-face reveal
+Timing: 0-3 / 3-7 / 7-12 / 12-23 / 23-27s">Copy shot list</button></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="moodboard-section fade-in">
+      <div class="container">
+        <div class="eyebrow" style="text-align:center">Visual language</div>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 8px;">Creator Moodboard</h2>
+        <p class="section-sub" style="text-align: center; margin: 0 auto 18px;">Cool, watery, skin-first. Hover or swipe to explore the vibes for your next video.</p>
+
+        <p class="swipe-hint">← Swipe to explore →</p>
+
+        <div class="moodboard-container">
+          <div class="moodboard-track">
+            <div class="bounce-card"><img src="img/abnc-cica-bubble-foam-face.jpg" alt="Model with foam texture on skin" loading="lazy"></div>
+            <div class="bounce-card"><img src="img/abnc-cica-bubble-foam-cloud.jpg" alt="Foam cloud texture with cica leaves" loading="lazy"></div>
+            <div class="bounce-card product-card"><img src="img/abnc-cica-bubble-serum-cutout.png" alt="ABN°C Cica Bubble Serum bottle" loading="lazy"></div>
+            <div class="bounce-card"><img src="img/abnc-ultra-fit-step-01.jpg" alt="Micro foam on skin illustration" loading="lazy"></div>
+            <div class="bounce-card"><img src="img/abnc-sellingpoint-01-premakeup.jpg" alt="Pre-makeup key visual" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section id="proof" class="sec fade-in">
+      <div class="eyebrow">Proof</div>
+      <h2 class="section-title">The numbers, then the mirror</h2>
+      <div style="text-align:center">
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat-item"><div class="stat-number" data-target="189.14" data-suffix="%">0%</div><div class="stat-desc">Faster absorption speed<small>vs. an ordinary liquid serum*</small></div></div>
+          <div class="stat-item"><div class="stat-number" data-target="17.18" data-suffix="%">0%</div><div class="stat-desc">Look of redness soothed<small>after 1 use*</small></div></div>
+          <div class="stat-item"><div class="stat-number" data-target="28.09" data-suffix="%">0%</div><div class="stat-desc">Pore volume reduction<small>after 2 weeks*</small></div></div>
+          <div class="stat-item"><div class="stat-number" data-target="100" data-suffix="%">0%</div><div class="stat-desc">Said it feels less sticky<small>than a liquid serum, top-box*</small></div></div>
+        </div>
+      </div>
+      <div class="ba-wrapper" style="margin-top:26px">
+        <div class="ba-intro">
+          <h3>Calm, texture, base.</h3>
+          <p>Drag to compare the look of redness and texture before and after. Illustrative slider — the real proof is in your own footage.</p>
+          <ul class="ba-points"><li><span class="dot"></span> Redness relief after 1 use (17.18% soothing result)</li><li><span class="dot"></span> Pores look less visible after 2–4 weeks of daily use</li></ul>
+          <p class="ba-note">Always pair before/after content with the clinical footnote and your own honest experience.</p>
+        </div>
+        <div class="ba-slider-container">
+          <div class="ba-slider">
+            <div class="ba-img before"></div>
+            <div class="ba-img after" id="afterImage"></div>
+            <span class="ba-label before-label">Before</span><span class="ba-label after-label">After</span>
+            <div class="ba-handle" id="baHandle"></div>
+            <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Before and after comparison slider">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ULTRA-FIT SYSTEM ============ -->
+    <section class="system-section fade-in">
+      <div class="sec-flow"></div>
+      <div class="eyebrow" style="color:#2e7d32">Texture technology</div>
+      <h2>Ultra-Fit Bubble System™</h2>
+      <p>Three things happen in the two seconds after you pump: the double-mesh pump whips the liquid into micro-foam, the foam bursts against your skin, and the actives ride the water layer into the surface of the stratum corneum.</p>
+
+      <div class="system-steps">
+        <div class="step-card">
+          <div class="step-media">
+            <img src="img/abnc-ultra-fit-step-01.jpg" alt="Micro bubble step illustration" loading="lazy">
+            <span class="step-label">Step 01</span>
+            <div class="step-bubbles" aria-hidden="true">
+              <i style="width:14px;height:14px;left:22%;animation-delay:0s"></i>
+              <i style="width:9px;height:9px;left:52%;animation-delay:1.6s"></i>
+              <i style="width:18px;height:18px;left:74%;animation-delay:3.1s"></i>
+            </div>
+          </div>
+          <div class="step-body"><h4>Micro bubble</h4><p>Two mesh layers turn the essence into ultra-fine foam that hugs the skin without running.</p></div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-media">
+            <img src="img/abnc-ultra-fit-step-02.jpg" alt="Bubble burst step illustration" loading="lazy">
+            <span class="step-label">Step 02</span>
+            <div class="step-bubbles" aria-hidden="true">
+              <i style="width:11px;height:11px;left:30%;animation-delay:.6s"></i>
+              <i style="width:16px;height:16px;left:60%;animation-delay:2.2s"></i>
+              <i style="width:8px;height:8px;left:82%;animation-delay:3.8s"></i>
+            </div>
+          </div>
+          <div class="step-body"><h4>Bubble burst</h4><p>The foam breaks on contact. That tiny pressure change opens the absorption channel — no rubbing.</p></div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-media">
+            <img src="img/abnc-ultra-fit-step-03.jpg" alt="Epidermal ultra-fit step illustration" loading="lazy">
+            <span class="step-label">Step 03</span>
+            <div class="step-bubbles" aria-hidden="true">
+              <i style="width:13px;height:13px;left:26%;animation-delay:1.1s"></i>
+              <i style="width:10px;height:10px;left:56%;animation-delay:2.7s"></i>
+              <i style="width:15px;height:15px;left:78%;animation-delay:4.4s"></i>
+            </div>
+          </div>
+          <div class="step-body"><h4>Epidermal ultra-fit</h4><p>Actives travel in the water layer and settle into the surface layers of the stratum corneum.</p></div>
+        </div>
+      </div>
+
+      <p class="system-foot">*Illustration of the delivery concept, not a depiction of penetration depth in an individual user.</p>
+    </section>
+
+    <!-- ============ INGREDIENTS ============ -->
+    <section id="ingredients" class="ingredients-section">
+      <div class="ingredients-text">
+        <div class="eyebrow">The formula</div>
+        <h2 class="section-title" style="font-size:29px;">C³ ELIXIR™ + the pore &amp; barrier team</h2>
+        <p style="color:#666; margin-bottom:18px; font-size:14.5px;">Six headline actives in one micro-foam vehicle: calm the look of redness, condition pores, hold water in.</p>
+        <ul class="ingredient-list">
+          <li><span class="ingredient-bullet" style="background:#e8f5e9; color:#2e7d32;">1</span><div><strong>CICA (Centella Asiatica)</strong><p><b>Calm care.</b> Helps soothe the look of redness and keep skin comfortable.</p></div></li>
+          <li><span class="ingredient-bullet" style="background:#e8f5e9; color:#2e7d32;">2</span><div><strong>GUAIAZULENE</strong><p><b>Cool care.</b> Adds the cooling, cushioning feel that makes the foam application pleasant.</p></div></li>
+          <li><span class="ingredient-bullet" style="background:#e8f5e9; color:#2e7d32;">3</span><div><strong>TEA TREE</strong><p><b>Cure care.</b> Helps care for skin that feels stressed, oily or unbalanced.</p></div></li>
+          <li><span class="ingredient-bullet" style="background:#fff3e0; color:#e65100;">4</span><div><strong>ANTI SEBUM P / ANTI-PORE S</strong><p><b>Pore &amp; oil care.</b> Patented ingredients that help manage excess sebum and the look of enlarged pores.</p></div></li>
+          <li><span class="ingredient-bullet" style="background:#fff3e0; color:#e65100;">5</span><div><strong>CERACARE AC-1 (5 Ceramides + Cholesterol)</strong><p><b>Barrier care.</b> Supports the moisture barrier so water stays in after the foam dries down.</p></div></li>
+          <li><span class="ingredient-bullet" style="background:#e3f2fd; color:#1565c0;">6</span><div><strong>11 Types of HA + Fructan</strong><p><b>Deep hydration.</b> Multi-weight hydration that reaches the 20th layer of the stratum corneum after one use.</p></div></li>
+        </ul>
+        <div class="sub-actives">
+          <span>D-Panthenol</span><span>β-Glucan</span><span>Fragrance: aquatic citrus</span><span>Vegan formula</span>
+        </div>
+      </div>
+
+      <div class="ingredients-chart">
+        <div class="chart-connections"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M 50 35 L 25 70 M 50 35 L 75 70 M 50 85 L 25 70 M 50 85 L 75 70" fill="none" stroke="rgba(197, 43, 46, 0.15)" stroke-width="1.5" stroke-dasharray="4 4"/></svg></div>
+        <div class="chart-core">
+          <div class="core-glow"></div><div class="core-badge">C³ ELIXIR™</div><h4>Calm · Cool · Cure</h4><p>Cica · Guaiazulene · Tea tree</p>
+        </div>
+        <div class="chart-middle">
+          <div class="bubble-item"><div class="bubble-content"><strong>ANTI SEBUM P</strong><span>Oil control</span></div></div>
+          <div class="bubble-item"><div class="bubble-content"><strong>CERACARE AC-1</strong><span>Barrier care</span></div></div>
+        </div>
+        <div class="bubble-item bubble-large"><div class="bubble-content"><strong>11 Types Hyaluronic Acid + Fructan</strong><span>Hydration down to the 20th layer</span></div></div>
+      </div>
+    </section>
+
+    <!-- ============ MOODBOARD ============ -->
+
+    <!-- ============ CLAIM-SAFE ============ -->
+    <section class="claim-section fade-in">
+      <div class="eyebrow">Compliance corner</div>
+      <h2 class="section-title" style="font-size:28px;">Say this. Not that.</h2>
+      <p style="font-size:14px;color:#6b625f;max-width:640px;">TikTok Shop reviewers are strict about skincare claims. These swaps keep the content punchy without promising a medical outcome.</p>
+
+      <div class="claim-grid">
+        <div class="claim-col yes">
+          <h4>✓ Safe to say</h4>
+          <ul>
+            <li>“Helps balance oil and water so makeup sits better.”</li>
+            <li>“Helps soothe the look of redness after one use.”</li>
+            <li>“Pores look less visible after two weeks.”</li>
+            <li>“Preps skin for smoother-looking foundation.”</li>
+            <li>“Clinically tested for low skin irritation.”</li>
+            <li>“Feels weightless and non-sticky under makeup.”</li>
+          </ul>
+        </div>
+        <div class="claim-col no">
+          <h4>✕ Avoid</h4>
+          <ul>
+            <li>“Treats or fights acne / antibacterial.”</li>
+            <li>“Pores disappear instantly.”</li>
+            <li>“Zero irritation / fragrance-free.”</li>
+            <li>“Guarantees no caking or pilling.”</li>
+            <li>“Replaces all your skincare.”</li>
+            <li>“Invented before/after proof.”</li>
+          </ul>
+        </div>
+      </div>
+      <div class="eyebrow" style="margin-top:34px">Captions you can paste</div><div class="kit-grid">
+        <div class="kit-card">
+          <h5>Pre-makeup angle</h5>
+          <p>“My foundation kept going patchy until I fixed the base, not the foundation. One pump of this micro-foam essence — hydrate, soothe, balance — then makeup. Same foundation, different finish.”</p>
+          <button class="copy-btn ghost" data-script="My foundation kept going patchy until I fixed the base, not the foundation. One pump of this micro-foam essence - hydrate, soothe, balance - then makeup. Same foundation, different finish. #ABNC #KBeauty #PreMakeup #OilySkin">Copy caption</button>
+        </div>
+        <div class="kit-card">
+          <h5>Minimal routine angle</h5>
+          <p>“Five bottles became one. Soothing, pore care and oil-water balance in a single pump, which means my 7 AM routine is three minutes and my skin is not angry about it.”</p>
+          <button class="copy-btn ghost" data-script="Five bottles became one. Soothing, pore care and oil-water balance in a single pump, which means my 7 AM routine is three minutes and my skin is not angry about it. #ABNC #KBeauty #MinimalSkincare #SensitiveSkin">Copy caption</button>
+        </div>
+        <div class="kit-card">
+          <h5>Texture angle</h5>
+          <p>“It pumps out as foam and melts the second it touches skin — no dragging, no rubbing, no sticky residue. If your barrier hates friction, this is the application you want.”</p>
+          <button class="copy-btn ghost" data-script="It pumps out as foam and melts the second it touches skin - no dragging, no rubbing, no sticky residue. If your barrier hates friction, this is the application you want. #ABNC #KBeauty #TextureTest #ASMR">Copy caption</button>
+        </div>
+      </div><div class="kit-hashtags">
+        <span>#ABNC</span><span>#CicaBubbleSerum</span><span>#SkinPrep</span><span>#KBeauty</span>
+        <span>#CombinationSkin</span><span>#TravelSkincare</span><span>#SimpleSkincare</span>
+      </div>
+      <p class="claim-foot">*Clinical testing by OATC Skin Clinical Trial Center: 31 adults, Aug 18 – Sep 3 2026 (absorption, hydration, soothing, pores); 30 adults, Sep 1 – 3 2026 (low-irritation patch test). Consumer survey: 22 women aged 20–60, Jan 15 – Feb 6 2026, top-box responses. Individual results vary. Always disclose paid partnership with #ad and follow TikTok Shop content rules.</p>
+    </section>
+
+    <!-- ============ CAPTION KIT ============ -->
+    
+
+    <!-- ============ CLINICAL ============ -->
+    <section id="clinical" class="sec fade-in">
+      <div class="eyebrow">The receipts</div>
+      <h2 class="section-title">Clinically tested</h2>
+      <p class="section-sub">Based on OATC Skin Clinical Trial Center testing with 31 adults (aged 20–60, Korean men and women) unless noted otherwise.</p>
+      <table class="clinical-table">
+        <thead><tr><th>NO</th><th>Category</th><th>What was measured</th><th>Conditions</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Absorption</td><td>Absorption amount, speed and depth vs. an ordinary liquid serum</td><td>2026.08.18–08.19 · 31 adults</td></tr>
+          <tr><td>2</td><td>Hydration</td><td>Moisture improvement down to the 20th layer after 1 use</td><td>2026.08.19–09.03 · 31 adults</td></tr>
+          <tr><td>3</td><td>Soothing</td><td>Redness from external irritation soothed after 1 use</td><td>2026.08.19–09.03 · 31 adults</td></tr>
+          <tr><td>4</td><td>Pores</td><td>Pore depth, count, area and volume after 2 and 4 weeks</td><td>2026.08.19–09.03 · 31 adults</td></tr>
+          <tr><td>5</td><td>Pigmentation</td><td>Blemish and pigmentation area after 2 and 4 weeks</td><td>2026.08.19–09.03 · 31 adults</td></tr>
+          <tr><td>6</td><td>Low irritation</td><td>Patch test — no irritation observed at 30 min or 24 h (mean score 0.00)</td><td>2026.09.01–09.03 · 30 adults</td></tr>
+        </tbody>
+      </table>
+      <p class="clinical-note">Results are based on instrumental and consumer testing; individual results vary with skin type and routine. Cite the test conditions whenever you show a number on screen.</p>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact-section fade-in">
+      <h2>Let’s build your video</h2>
+      <p>Need product, exclusivity or creative direction? We reply within one business day.</p>
+      <div class="contact-info">
+        <div class="contact-item">📧 <a href="mailto:Harin@abnc.com">Harin@abnc.com</a></div>
+        <div class="contact-item">💬 <a href="https://wa.me/821039657894" target="_blank" rel="noopener noreferrer">+82 010-3965-7894 (WhatsApp)</a></div>
+      </div>
+      <p style="margin-top:36px; font-size:13px; color:#999; letter-spacing:.4px;">ABN°C | A BETTER NEW CHAPTER FOR A BETTER NEW YOU</p>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 ABN°C. All rights reserved.</div>
+      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="https://abnc.com" target="_blank" rel="noopener">abnc.com</a></div>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Storyboard preview">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">✕</button>
+    <img src="" alt="" id="lightboxImg">
+    <div class="lightbox-hint" id="lightboxHint">Click anywhere or press Esc to close</div>
+  </div>
+
+<!-- 原有交互逻辑 -->
+  <script>
+    // 1. 滚动淡入
+    (function() { const faders = document.querySelectorAll('.fade-in'); const appearOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }; const appearOnScroll = new IntersectionObserver(function(entries, observer) { entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('visible'); observer.unobserve(entry.target); }); }, appearOptions); faders.forEach(fader => appearOnScroll.observe(fader)); })();
+    // 2. 导航栏滚动变色
+    (function() { const navbar = document.getElementById('navbar'); window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true }); })();
+    // 3. Stats 数字 count-up
+    (function() { const statsGrid = document.getElementById('statsGrid'); if (!statsGrid) return; const numbers = statsGrid.querySelectorAll('.stat-number'); let animated = false; const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting && !animated) { animated = true; numbers.forEach(el => { const target = parseFloat(el.dataset.target); const suffix = el.dataset.suffix || ''; const start = performance.now(); const tick = (now) => { const progress = Math.min((now - start) / 1600, 1); const eased = 1 - Math.pow(1 - progress, 3); el.textContent = (target * eased).toFixed(2) + suffix; if (progress < 1) requestAnimationFrame(tick); }; requestAnimationFrame(tick); }); } }); }, { threshold: 0.4 }); observer.observe(statsGrid); })();
+    // 4. Before / After 拖动滑块
+    (function() { const range = document.getElementById('baRange'); const afterImage = document.getElementById('afterImage'); const handle = document.getElementById('baHandle'); if (!range || !afterImage || !handle) return; const update = (val) => { const v = Math.max(0, Math.min(100, val)); afterImage.style.clipPath = `inset(0 0 0 ${v}%)`; handle.style.left = `${v}%`; }; range.addEventListener('input', (e) => update(e.target.value)); update(50); })();
+    // 5. 3D 卡片倾斜
+    (function() { const cards = document.querySelectorAll('.tilt-card'); if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) { cards.forEach(card => { card.addEventListener('mousemove', e => { const rect = card.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top; const centerX = rect.width / 2; const centerY = rect.height / 2; const rotateX = ((y - centerY) / centerY) * -12; const rotateY = ((x - centerX) / centerX) * 12; const distanceFromCenter = Math.hypot(x - centerX, y - centerY); const maxDistance = Math.hypot(centerX, centerY); const scale = 1.02 + (distanceFromCenter / maxDistance) * 0.03; card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(${scale}, ${scale}, ${scale})`; }); card.addEventListener('mouseleave', () => { card.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'; card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`; setTimeout(() => { card.style.transition = ''; }, 400); }); }); } })();
+    // 6. 一键复制
+    (function() { const copyBtns = document.querySelectorAll('.copy-btn'); copyBtns.forEach(btn => { btn.addEventListener('click', async () => { const scriptText = btn.getAttribute('data-script'); try { await navigator.clipboard.writeText(scriptText); const originalText = btn.innerHTML; btn.innerHTML = '✅ Copied!'; btn.classList.add('copied'); setTimeout(() => { btn.innerHTML = originalText; btn.classList.remove('copied'); }, 2000); } catch (err) { alert('Copy failed. Please select and copy manually.'); } }); }); })();
+  </script>
+
+  <!-- 动态网格特效 JS -->
+  <script>
+    (function initCursorGrid() {
+      const canvas = document.getElementById('cursor-grid-canvas');
+      if (!canvas) return;
+      const gl = canvas.getContext('webgl2', { alpha: true, premultipliedAlpha: true, antialias: false });
+      if (!gl) return;
+      const VERTEX = `#version 300 es
+      void main() { vec2 p = vec2(float((gl_VertexID << 1) & 2), float(gl_VertexID & 2)); gl_Position = vec4(p * 2.0 - 1.0, 0.0, 1.0); }`;
+      const FRAGMENT = `#version 300 es
+      precision highp float; precision highp int;
+      uniform vec2 uResolution; uniform vec2 uOffset; uniform float uCellSize; uniform sampler2D uState; uniform ivec2 uCells;
+      uniform vec3 uColor; uniform vec3 uGridColor; uniform float uLineWidth; uniform float uMaxOpacity; uniform float uFillOpacity; uniform float uGridOpacity;
+      uniform float uCellRadius; uniform float uCellGap; uniform int uGridStyle; uniform vec2 uMouse; uniform float uRadius; uniform float uSpotlight; uniform float uPresence;
+      uniform float uEdgeFade; uniform float uReveal; out vec4 outColor;
+      float level(vec2 cell) { if (cell.x < 0.0 || cell.y < 0.0 || cell.x >= float(uCells.x) || cell.y >= float(uCells.y)) return 0.0; float v = texelFetch(uState, ivec2(cell), 0).r; return v * v * (3.0 - 2.0 * v); }
+      float line(float d, float width) { float w = max(width, 1.0); return clamp(w * 0.5 + 0.5 - d, 0.0, 1.0) * (width / w); }
+      void main() {
+        vec2 pos = vec2(gl_FragCoord.x, uResolution.y - gl_FragCoord.y); vec2 g = (pos - uOffset) / uCellSize; vec2 cell = floor(g); vec2 f = g - cell; vec2 edge = min(f, 1.0 - f) * uCellSize;
+        float vx = line(edge.x, uLineWidth); float vy = line(edge.y, uLineWidth);
+        if (uGridStyle == 1) { float dash = uCellSize / 6.0; vx *= step(0.5, fract((pos.y - uOffset.y) / dash + 0.25)); vy *= step(0.5, fract((pos.x - uOffset.x) / dash + 0.25)); }
+        else if (uGridStyle == 2) { float r = max(uLineWidth * 1.25, 1.2); float d = length(edge); vx = clamp(r + 0.5 - d, 0.0, 1.0); vy = 0.0; }
+        else if (uGridStyle == 3) { float arm = uCellSize * 0.1 + uLineWidth; vx *= step(edge.y, arm); vy *= step(edge.x, arm); }
+        float mark = max(vx, vy); vec2 toMouse = pos - uMouse;
+        float spot = exp(-dot(toMouse, toMouse) / max(uRadius * uRadius, 1.0) * 1.6) * uSpotlight * uPresence;
+        vec2 center = uResolution * 0.5; float reach = length(center);
+        float shown = smoothstep(uReveal * (reach + uCellSize * 2.0), uReveal * (reach + uCellSize * 2.0) - uCellSize * 2.0, length(pos - center));
+        shown = uReveal >= 1.0 ? 1.0 : shown; float fade = 1.0;
+        if (uEdgeFade > 0.0) { vec2 norm = pos / uResolution; vec2 a = clamp(norm / uEdgeFade, 0.0, 1.0); vec2 b = clamp((1.0 - norm) / uEdgeFade, 0.0, 1.0); vec2 sa = a * a * a * (a * (a * 6.0 - 15.0) + 10.0); vec2 sb = b * b * b * (b * (b * 6.0 - 15.0) + 10.0); fade = sa.x * sa.y * sb.x * sb.y; }
+        float own = level(cell); float gridAlpha = mark * min(uGridOpacity + spot * 0.45, 1.0) * fade * shown; float litAlpha = 0.0; float fillAlpha = 0.0;
+        if (uCellGap <= 0.0 && uCellRadius <= 0.0) { vec2 side = step(0.5, f) * 2.0 - 1.0; float nx = level(cell + vec2(side.x, 0.0)); float ny = level(cell + vec2(0.0, side.y)); float nc = level(cell + side); float ex = max(own, nx); float ey = max(own, ny); float joint = max(max(ex, ey), nc); litAlpha = max(vx * (edge.y < uLineWidth ? joint : ex), vy * (edge.x < uLineWidth ? joint : ey)) * uMaxOpacity; fillAlpha = own * uFillOpacity; }
+        else if (own > 0.0) { vec2 local = (f - 0.5) * uCellSize; float halfSize = uCellSize * 0.5 - max(uCellGap, 0.0); float radius = min(uCellRadius, halfSize); vec2 q = abs(local) - vec2(halfSize) + radius; float sd = length(max(q, 0.0)) + min(max(q.x, q.y), 0.0) - radius; float inside = clamp(0.5 - sd, 0.0, 1.0); litAlpha = line(abs(sd + uLineWidth * 0.5), uLineWidth) * inside * own * uMaxOpacity; fillAlpha = inside * own * uFillOpacity; }
+        litAlpha *= fade; fillAlpha *= fade; float cellAlpha = clamp(max(litAlpha, fillAlpha), 0.0, 1.0); float alpha = cellAlpha + gridAlpha * (1.0 - cellAlpha);
+        vec3 premul = uColor * cellAlpha + uGridColor * gridAlpha * (1.0 - cellAlpha); outColor = vec4(premul, alpha);
+      }`;
+      const compile = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+      const prog = gl.createProgram(); gl.attachShader(prog, compile(gl.VERTEX_SHADER, VERTEX)); gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, FRAGMENT)); gl.linkProgram(prog); gl.useProgram(prog);
+      const uniforms = {}; const uCount = gl.getProgramParameter(prog, gl.ACTIVE_UNIFORMS); for (let i = 0; i < uCount; i++) { const info = gl.getActiveUniform(prog, i); uniforms[info.name] = gl.getUniformLocation(prog, info.name); }
+      const vao = gl.createVertexArray(); const tex = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, tex); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST); gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
+      const settings = { cellSize: 40, color: '#c52b2e', gridColor: '#e6e6e6', radius: 150, holdTime: 500, fadeDuration: 800, lineWidth: 1.5, maxOpacity: 0.8, fillOpacity: 0.05, gridOpacity: 0.15, spotlight: 0.6, edgeFade: 0.2 };
+      let cols, rows, levels, targets, touched, pixels, clock = 0, last = 0, mouse = {x:0, y:0}, pointer = {x:0, y:0, in:false}, presence = 0; let dirty = true, introClock = 0; const RATIO = Math.min(window.devicePixelRatio || 1, 2);
+      const resize = () => { const w = canvas.clientWidth, h = canvas.clientHeight; canvas.width = w * RATIO; canvas.height = h * RATIO; cols = Math.ceil(w / settings.cellSize) + 1; rows = Math.ceil(h / settings.cellSize) + 1; levels = new Float32Array(cols * rows); targets = new Float32Array(cols * rows); touched = new Float32Array(cols * rows).fill(-1e9); pixels = new Uint8Array(cols * rows); gl.bindTexture(gl.TEXTURE_2D, tex); gl.texImage2D(gl.TEXTURE_2D, 0, gl.R8, cols, rows, 0, gl.RED, gl.UNSIGNED_BYTE, pixels); dirty = true; };
+      const light = (i, v) => { if (v > targets[i]) targets[i] = v; touched[i] = clock; };
+      const energize = (x, y) => { const size = settings.cellSize, r = settings.radius; const minC = Math.max(0, Math.floor((x - r) / size)); const maxC = Math.min(cols - 1, Math.floor((x + r) / size)); const minR = Math.max(0, Math.floor((y - r) / size)); const maxR = Math.min(rows - 1, Math.floor((y + r) / size)); for (let row = minR; row <= maxR; row++) { for (let col = minC; col <= maxC; col++) { const cx = col * size + size / 2, cy = row * size + size / 2; const dist = Math.hypot(cx - x, cy - y); if (dist > r) continue; light(row * cols + col, 1 - dist / r); } } };
+      const frame = (now) => { const dt = Math.min((now - last) / 1000, 0.05) || 0.016; last = now; clock += dt; if (introClock < 1) introClock = Math.min(1, introClock + dt / 1.4); mouse.x += (pointer.x - mouse.x) * (1 - Math.exp(-dt / 0.07)); mouse.y += (pointer.y - mouse.y) * (1 - Math.exp(-dt / 0.07)); presence += ((pointer.in ? 1 : 0) - presence) * (1 - Math.exp(-dt / 0.25)); const holdSec = settings.holdTime / 1000; const fadeStep = dt / (settings.fadeDuration / 1000); let active = introClock < 1 || Math.abs(presence - (pointer.in ? 1 : 0)) > 0.002; for (let i = 0; i < levels.length; i++) { let target = targets[i]; if (target <= 0 && levels[i] <= 0) continue; if (clock - touched[i] > holdSec) target = Math.max(0, target - fadeStep); targets[i] = target; const before = levels[i]; const next = target > before ? before + (target - before) * (1 - Math.exp(-dt / 0.045)) : target; levels[i] = next < 0.002 ? 0 : next; if (levels[i] !== before) dirty = true; if (levels[i] > 0 || targets[i] > 0) active = true; } if (Math.abs(mouse.x - pointer.x) + Math.abs(mouse.y - pointer.y) > 0.05 && presence > 0.002) active = true; gl.viewport(0, 0, canvas.width, canvas.height); gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT); if (dirty) { for (let i = 0; i < levels.length; i++) pixels[i] = Math.round(Math.max(0, Math.min(1, levels[i])) * 255); gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, cols, rows, gl.RED, gl.UNSIGNED_BYTE, pixels); dirty = false; } const hex2rgb = (hex) => { const h = hex.replace('#', ''); const n = parseInt(h.length === 3 ? h.split('').map(c=>c+c).join('') : h, 16); return [((n>>16)&255)/255, ((n>>8)&255)/255, (n&255)/255]; }; gl.uniform1i(uniforms.uState, 0); gl.uniform2f(uniforms.uResolution, canvas.width, canvas.height); gl.uniform2f(uniforms.uOffset, 0, 0); gl.uniform1f(uniforms.uCellSize, settings.cellSize * RATIO); gl.uniform2i(uniforms.uCells, cols, rows); gl.uniform3fv(uniforms.uColor, hex2rgb(settings.color)); gl.uniform3fv(uniforms.uGridColor, hex2rgb(settings.gridColor)); gl.uniform1f(uniforms.uLineWidth, settings.lineWidth * RATIO); gl.uniform1f(uniforms.uMaxOpacity, settings.maxOpacity); gl.uniform1f(uniforms.uFillOpacity, settings.fillOpacity); gl.uniform1f(uniforms.uGridOpacity, settings.gridOpacity); gl.uniform1f(uniforms.uCellRadius, 0); gl.uniform1f(uniforms.uCellGap, 0); gl.uniform1i(uniforms.uGridStyle, 0); gl.uniform2f(uniforms.uMouse, mouse.x * RATIO, mouse.y * RATIO); gl.uniform1f(uniforms.uRadius, settings.radius * RATIO); gl.uniform1f(uniforms.uSpotlight, settings.spotlight); gl.uniform1f(uniforms.uPresence, presence); gl.uniform1f(uniforms.uEdgeFade, settings.edgeFade); gl.uniform1f(uniforms.uReveal, introClock >= 1 ? 1 : 1 - Math.pow(1 - introClock, 2.2)); gl.bindVertexArray(vao); gl.drawArrays(gl.TRIANGLES, 0, 3); if (active) requestAnimationFrame(frame); };
+      const locate = (e) => { const r = canvas.getBoundingClientRect(); const x = e.clientX - r.left, y = e.clientY - r.top; return { x, y, in: x >= 0 && y >= 0 && x <= r.width && y <= r.height }; };
+      canvas.parentElement.addEventListener('pointermove', e => { const p = locate(e); pointer.x = p.x; pointer.y = p.y; pointer.in = p.in; if (p.in) { energize(p.x, p.y); if (!last) { last = performance.now(); requestAnimationFrame(frame); } } });
+      canvas.parentElement.addEventListener('pointerleave', () => { pointer.in = false; if (!last) { last = performance.now(); requestAnimationFrame(frame); } });
+      new ResizeObserver(() => { resize(); dirty = true; if (!last) { last = performance.now(); requestAnimationFrame(frame); } }).observe(canvas.parentElement);
+      resize(); last = performance.now(); requestAnimationFrame(frame);
+    })();
+  </script>
+
+  <!-- 新增交互：阅读进度 / 点按出泡 / 卡片入场 / 故事板放大 -->
+  <script>
+    // A. 阅读进度条
+    (function() {
+      const bar = document.getElementById('readProgress');
+      if (!bar) return;
+      const update = () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, (window.scrollY / h) * 100) : 0) + '%';
+      };
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+
+    // B. 英雄区产品：点按打泡
+    (function() {
+      const stage = document.getElementById('productStage');
+      const counter = document.getElementById('pumpCounter');
+      if (!stage || !counter) return;
+      let pumps = 0;
+      const pump = () => {
+        pumps += 1;
+        counter.innerHTML = 'Tap the bottle · <b>' + pumps + '</b> pump' + (pumps > 1 ? 's' : '');
+        const rect = stage.getBoundingClientRect();
+        const cx = rect.width * 0.5;
+        const cy = rect.height * 0.34;
+        for (let i = 0; i < 16; i++) {
+          const p = document.createElement('span');
+          p.className = 'foam-particle';
+          const ang = Math.random() * Math.PI * 2;
+          const dist = 26 + Math.random() * 96;
+          const size = 6 + Math.random() * 13;
+          p.style.width = p.style.height = size + 'px';
+          p.style.left = (cx - size / 2) + 'px';
+          p.style.top = (cy - size / 2) + 'px';
+          p.style.setProperty('--dx', Math.cos(ang) * dist + 'px');
+          p.style.setProperty('--dy', (Math.sin(ang) * dist - 46) + 'px');
+          p.style.setProperty('--sc', (0.7 + Math.random() * 1.3).toFixed(2));
+          stage.appendChild(p);
+          setTimeout(() => p.remove(), 950);
+        }
+      };
+      stage.addEventListener('click', pump);
+      stage.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pump(); }
+      });
+    })();
+
+    // C. 微交互组件进入视口后归位
+    (function() {
+      const widgets = document.querySelectorAll('.mini-widget');
+      if (!widgets.length) return;
+      if (!('IntersectionObserver' in window)) { widgets.forEach(w => w.classList.add('in-view')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.45 });
+      widgets.forEach(w => io.observe(w));
+    })();
+
+    // D. 故事板灯箱
+    (function() {
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lightboxImg');
+      const closeBtn = document.getElementById('lightboxClose');
+      const hint = document.getElementById('lightboxHint');
+      if (!box || !img) return;
+      const open = (src, caption) => {
+        img.src = src;
+        img.alt = caption || 'Storyboard preview';
+        if (hint) hint.textContent = (caption || '') + '  ·  click anywhere or press Esc to close';
+        box.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        box.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+      document.querySelectorAll('[data-lightbox]').forEach(media => {
+        media.addEventListener('click', () => open(media.dataset.lightbox, media.dataset.caption));
+        media.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(media.dataset.lightbox, media.dataset.caption); }
+        });
+        media.setAttribute('tabindex', '0');
+        media.setAttribute('role', 'button');
+        media.setAttribute('aria-label', (media.dataset.caption || 'Storyboard') + ' — open preview');
+      });
+      closeBtn && closeBtn.addEventListener('click', close);
+      box.addEventListener('click', (e) => { if (e.target === box || e.target === img) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    })();
+  </script>
+
+</body>
+</html>
