@@ -751,6 +751,34 @@
       .support-grid { grid-template-columns: 1fr; }
       .audience-grid { grid-template-columns: 1fr; }
     }
+
+    /* ---------- 2026.11 · keyframes + delivery strip ---------- */
+    .delivery-strip {
+      display: grid; grid-template-columns: 1.6fr .8fr .8fr 1fr; gap: 20px; align-items: center;
+      background: #fff; border: 1px solid #dfeae1; border-radius: 22px;
+      padding: 22px 26px; margin: 0 auto 30px; max-width: 980px; text-align: left;
+      box-shadow: 0 14px 34px -26px rgba(46,125,50,.4);
+    }
+    .ds-kicker { font-size: 9.5px; letter-spacing: 1.4px; text-transform: uppercase; color: #2e7d32; font-weight: 800; }
+    .ds-lead h3 { font-size: 20px; margin: 5px 0 6px; letter-spacing: -.3px; }
+    .ds-lead p { font-size: 12.5px; color: #6b625f; line-height: 1.5; }
+    .ds-stat b { display: block; font-size: 30px; color: var(--abnc-red); letter-spacing: -.02em; line-height: 1; }
+    .ds-stat b em { font-style: normal; font-size: 15px; vertical-align: super; margin-left: 1px; }
+    .ds-stat span { display: block; font-size: 10.5px; color: #8a7f7b; margin-top: 6px; line-height: 1.35; }
+    @keyframes bottleShake {
+      0%, 100% { transform: translateY(-6px) rotate(0deg); }
+      20% { transform: translateY(-6px) rotate(-3deg); }
+      45% { transform: translateY(-6px) rotate(3deg); }
+      70% { transform: translateY(-6px) rotate(-1.6deg); }
+    }
+    .hero-product.shaking { animation: bottleShake .42s ease; }
+    @media (max-width: 980px) {
+      .delivery-strip { grid-template-columns: 1fr 1fr; }
+      .ds-lead { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+      .delivery-strip { grid-template-columns: 1fr; }
+    }
     /* ---------- vertical compaction ---------- */
     .hero { padding: 46px 34px; }
     .system-section { padding: 42px 32px; }
@@ -824,7 +852,7 @@
           <span class="tag">#CombinationSkin</span>
         </div>
         <div class="hero-cta">
-          <a href="#why" class="btn-primary">See the 3 selling points</a>
+          <a href="#why" class="btn-primary">See the selling points</a>
           <a href="#scripts" class="btn-outline">Grab the scripts</a>
         </div>
       </div>
@@ -840,7 +868,7 @@
             <i style="width:18px;height:18px;right:18%;top:70%;animation-delay:-.6s"></i>
           </div>
           <img src="img/abnc-cica-bubble-serum-cutout.png" alt="ABN°C CICA BUBBLE SERUM bottle" class="hero-product" id="heroProduct">
-          <div class="pump-counter" id="pumpCounter">Tap the bottle · <b>0</b> pump</div>
+          <div class="pump-counter" id="pumpCounter">Shake 2–3× · tap to pump</div>
         </div>
       </div>
     </section>
@@ -862,8 +890,8 @@
     <section id="why" class="sec">
       <div class="fade-in">
         <div class="eyebrow">The selling points</div>
-        <h2 class="section-title">Two selling points to lead with.</h2>
-        <p class="section-sub">Lead with the pre-makeup job or the light application, then bring in one or two supporting care benefits. Both come straight from the product brief.</p>
+        <h2 class="section-title">Two selling points, plus the delivery story.</h2>
+        <p class="section-sub">Lead with the pre-makeup job or the light application, then bring in a supporting care benefit. The absorption story sits in the texture section below.</p>
       </div>
 
       <div class="sp-grid two">
@@ -949,17 +977,7 @@
       </div>
     </section>
 
-    <div class="cover-strip-wrap fade-in">
-      <p class="cap">Cover kit — tap to open full size</p>
-      <div class="cover-strip">
-        <figure data-lightbox="img/abnc-sellingpoint-01-premakeup.jpg" data-caption="Cover 01 — Pre-makeup 3-in-1">
-          <img src="img/abnc-sellingpoint-01-premakeup.jpg" alt="Cover 01 pre-makeup 3-in-1" loading="lazy">
-        </figure>
-        <figure data-lightbox="img/abnc-sellingpoint-03-bubble-texture.jpg" data-caption="Cover 03 — Foam, not friction">
-          <img src="img/abnc-sellingpoint-03-bubble-texture.jpg" alt="Cover 03 foam not friction" loading="lazy">
-        </figure>
-      </div>
-    </div>
+    
 
     <!-- ============ SCRIPTS ============ -->
     <section id="scripts" class="sec">
@@ -985,7 +1003,7 @@
           <div class="sc-hook"><span>Hook · 0–3s</span>“#ad Minimal morning skincare — skip toner and lightweight moisturizer.”</div>
           <ol class="sc-shots">
             <li><b>01</b><span>Freshly cleansed, bare face.</span></li>
-            <li><b>02</b><span>One pump; macro on the fluffy foam. Mic close for the bubble-crackle sound.</span></li>
+            <li><b>02</b><span>Shake 2–3×, then one pump; macro on the fluffy foam. Mic close for the bubble-crackle sound.</span></li>
             <li><b>03</b><span>Press the foam in — don’t rub — and watch it melt on the skin.</span></li>
             <li><b>04</b><span>Touch the finished face, show zero stickiness, go straight in with SPF or base.</span></li>
           </ol>
@@ -1015,7 +1033,7 @@ CTA: Grab it in my TikTok Shop yellow basket.
 
 KEY POINT: minimal routine, replaces toner + lightweight moisturizer, sensitive-friendly, fast absorption.
 NOTE: tag #ad / #ABNCpartner. Say looks soothed, never treats. Patch-test first if you have very sensitive skin.">📋 Copy full script</button>
-            <span class="sc-board">Board pattern → <a href="#boards">B02 · Less steps</a></span>
+            <span class="sc-board">Board pattern → <a href="#boards">01 · Minimal morning</a></span>
           </div>
         </article>
 
@@ -1031,7 +1049,7 @@ NOTE: tag #ad / #ABNCpartner. Say looks soothed, never treats. Patch-test first 
           <div class="sc-hook"><span>Hook · 0–3s</span>“#ad Why my foundation stops looking patchy mid-day.”</div>
           <ol class="sc-shots">
             <li><b>01</b><span>Show the dry, cake-prone nose and cheeks.</span></li>
-            <li><b>02</b><span>Pump the foam, press it in until absorbed, wait 30–45s to set.</span></li>
+            <li><b>02</b><span>Shake, then pump the foam; press it in until absorbed, wait 30–45s to set.</span></li>
             <li><b>03</b><span>Buff foundation in with a damp sponge, finish the base.</span></li>
             <li><b>04</b><span>Edit: base right after application vs. 4 hours later — no touch-ups.</span></li>
           </ol>
@@ -1061,7 +1079,7 @@ CTA: Link in my shop showcase.
 
 KEY POINT: pre-makeup prep, no pilling, less patchy and cakey base, no greasy residue.
 NOTE: tag #ad / #ABNCpartner. Show the 30-45 second set time honestly. Patch-test first if you have very sensitive skin.">📋 Copy full script</button>
-            <span class="sc-board">Board pattern → <a href="#boards">B01 · Pre-makeup 3-in-1</a></span>
+            <span class="sc-board">Board pattern → <a href="#boards">02 · Pre-makeup prep</a></span>
           </div>
         </article>
 
@@ -1077,7 +1095,7 @@ NOTE: tag #ad / #ABNCpartner. Show the 30-45 second set time honestly. Patch-tes
           <div class="sc-hook"><span>Hook · 0–3s</span>“#ad My go-to for late-night stressed, irritated-looking skin.”</div>
           <ol class="sc-shots">
             <li><b>01</b><span>Bare face in daylight after a late night — redness, slight roughness.</span></li>
-            <li><b>02</b><span>Pump the foam, macro on it, then press gently over the flushed areas.</span></li>
+            <li><b>02</b><span>Shake, then pump; macro on the foam, then press gently over the flushed areas.</span></li>
             <li><b>03</b><span>Let it absorb; show the soft glow and your hand — no sticky feel.</span></li>
           </ol>
           <div class="sc-vo">
@@ -1106,7 +1124,7 @@ CTA: Tap the yellow basket for product details.
 
 KEY POINT: visually calms stressed skin, works alone or layered under mask or cream.
 NOTE: tag #ad / #ABNCpartner. Only visual language: looks calmer, looks soothed. Never treat or cure redness.">📋 Copy full script</button>
-            <span class="sc-board">Board pattern → <a href="#boards">B04 · ASMR foam</a></span>
+            <span class="sc-board">Board pattern → <a href="#boards">03 · Late-night reset</a></span>
           </div>
         </article>
 
@@ -1122,7 +1140,7 @@ NOTE: tag #ad / #ABNCpartner. Only visual language: looks calmer, looks soothed.
           <div class="sc-hook"><span>Hook · 0–3s</span>“#ad Oily-combination skin hates heavy moisturizers? Try this bubble serum.”</div>
           <ol class="sc-shots">
             <li><b>01</b><span>T-zone shine, breakout-prone face; blot with an oil-control sheet.</span></li>
-            <li><b>02</b><span>Pump the foam; press and let it melt into the skin.</span></li>
+            <li><b>02</b><span>Shake, then pump; press and let it melt into the skin.</span></li>
             <li><b>03</b><span>Back of hand to cheek — nothing sticks. Show the soft matte glow.</span></li>
           </ol>
           <div class="sc-vo">
@@ -1150,7 +1168,7 @@ CTA: Check my TikTok Shop for this bubble serum.
 
 KEY POINT: oily and summer friendly, hydration without heaviness, post-sun quick calming.
 NOTE: tag #ad / #ABNCpartner. Say hydrates and looks calmer - never treats breakouts. Patch-test first if you have very sensitive skin.">📋 Copy full script</button>
-            <span class="sc-board">Board pattern → <a href="#boards">B03 · Foam texture</a></span>
+            <span class="sc-board">Board pattern → <a href="#boards">04 · Summer combination</a></span>
           </div>
         </article>
 
@@ -1163,60 +1181,76 @@ NOTE: tag #ad / #ABNCpartner. Say hydrates and looks calmer - never treats break
     <section id="boards" class="sec">
       <div class="fade-in">
         <div class="eyebrow">Filming patterns</div>
-        <h2 class="section-title">Four 4-shot boards you can copy</h2>
-        <p class="section-sub">Tap a board to zoom. Pair it with the script that fits your angle.</p>
+        <h2 class="section-title">Four keyframe sets from the shoot</h2>
+        <p class="section-sub">Real frames, real skin. Rebuild each set with your own face and light — and shake the bottle 2–3× before every pump.</p>
       </div>
-      <div class="sb-grid">
-<article class="sb-card fade-in">
-          <div class="sb-media" data-lightbox="img/abnc-storyboard-01-premakeup.jpg" data-caption="B01 · Pre-makeup 3-in-1 storyboard">
-            <img src="img/abnc-storyboard-01-premakeup.jpg" alt="B01 pre-makeup 3-in-1 four-shot storyboard" loading="lazy">
+          <div class="sb-grid">
+        <article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-keyframes-01-minimal-morning.jpg" data-caption="Keyframes 01 · Minimal morning">
+            <img src="img/abnc-keyframes-01-minimal-morning.jpg" alt="Keyframes 01 minimal morning" loading="lazy">
             <span class="sb-zoom">Click to zoom</span>
           </div>
-          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B01</span><span class="sb-tag">Pre-makeup · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B01 PRE-MAKEUP 3-IN-1
-1. CU · bare skin, 7:12 AM (oily outside / tight inside)
-2. MACRO · one pump, foam holds its shape (sound on)
-3. CU · pat it in, melts in 10 sec, no rubbing
-4. SPLIT · same foundation, patchy vs. seamless
-Timing: 0-4 / 4-9 / 9-15 / 15-23 / 23-27s">Copy shot list</button></div></div>
+          <div class="sb-body compact">
+            <div class="sb-top"><span class="sb-code">01</span><span class="sb-tag">Minimal morning · 25 sec</span></div>
+            <div class="sb-actions"><button class="copy-btn ghost" data-script="KEYFRAMES 01 - MINIMAL MORNING
+1. Freshly cleansed skin
+2. One pump · foam close-up
+3. Gently press · let it melt
+4. Follow with sunscreen
+
+Shake the bottle 2-3 times before every pump - it reads as texture on camera.">Copy shot list</button></div>
+          </div>
         </article>
 
-<article class="sb-card fade-in">
-          <div class="sb-media" data-lightbox="img/abnc-storyboard-02-minimal-routine.jpg" data-caption="B02 · Minimal routine storyboard">
-            <img src="img/abnc-storyboard-02-minimal-routine.jpg" alt="B02 minimal routine four-shot storyboard" loading="lazy">
+        <article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-keyframes-02-pre-makeup-prep.jpg" data-caption="Keyframes 02 · Pre-makeup prep">
+            <img src="img/abnc-keyframes-02-pre-makeup-prep.jpg" alt="Keyframes 02 pre-makeup prep" loading="lazy">
             <span class="sb-zoom">Click to zoom</span>
           </div>
-          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B02</span><span class="sb-tag">Minimal routine · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B02 LESS STEPS, MORE RESULTS
-1. WIDE · the 5-bottle shelf
-2. MED · sweep them away, keep one
-3. CU · one bottle, three jobs
-4. TIMELAPSE · 12 min to 3 min
-Timing: 0-5 / 5-9 / 9-16 / 16-23 / 23-27s">Copy shot list</button></div></div>
+          <div class="sb-body compact">
+            <div class="sb-top"><span class="sb-code">02</span><span class="sb-tag">Pre-makeup prep · 30 sec</span></div>
+            <div class="sb-actions"><button class="copy-btn ghost" data-script="KEYFRAMES 02 - PRE-MAKEUP PREP
+1. Dry spots before makeup
+2. Press in · let it absorb
+3. Tap on foundation
+4. Wear check · film later
+
+Shake the bottle 2-3 times before every pump - it reads as texture on camera.">Copy shot list</button></div>
+          </div>
         </article>
 
-<article class="sb-card fade-in">
-          <div class="sb-media" data-lightbox="img/abnc-storyboard-03-bubble-texture.jpg" data-caption="B03 · Foam texture storyboard">
-            <img src="img/abnc-storyboard-03-bubble-texture.jpg" alt="B03 bubble texture four-shot storyboard" loading="lazy">
+        <article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-keyframes-03-late-night-reset.jpg" data-caption="Keyframes 03 · Late-night reset">
+            <img src="img/abnc-keyframes-03-late-night-reset.jpg" alt="Keyframes 03 late-night reset" loading="lazy">
             <span class="sb-zoom">Click to zoom</span>
           </div>
-          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B03</span><span class="sb-tag">Texture · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B03 FOAM, NOT FRICTION
-1. MACRO · foam dome from the pump (sound on)
-2. CU · melts on contact, no rubbing
-3. CU · zero-tug test (drag vs pat)
-4. CU · blotting paper, no stickiness
-Timing: 0-5 / 5-10 / 10-16 / 16-23 / 23-27s">Copy shot list</button></div></div>
+          <div class="sb-body compact">
+            <div class="sb-top"><span class="sb-code">03</span><span class="sb-tag">Late-night reset · 28 sec</span></div>
+            <div class="sb-actions"><button class="copy-btn ghost" data-script="KEYFRAMES 03 - LATE-NIGHT RESET
+1. Skin feels tight after a late night
+2. One pump · capture the texture
+3. Gently press onto cheeks
+4. Finish · add cream if needed
+
+Shake the bottle 2-3 times before every pump - it reads as texture on camera.">Copy shot list</button></div>
+          </div>
         </article>
 
-<article class="sb-card fade-in">
-          <div class="sb-media" data-lightbox="img/abnc-storyboard-04-asmr-foam.jpg" data-caption="B04 · ASMR foam storyboard">
-            <img src="img/abnc-storyboard-04-asmr-foam.jpg" alt="B04 ASMR foam four-shot storyboard" loading="lazy">
+        <article class="sb-card fade-in">
+          <div class="sb-media" data-lightbox="img/abnc-keyframes-04-summer-combination.jpg" data-caption="Keyframes 04 · Summer combination">
+            <img src="img/abnc-keyframes-04-summer-combination.jpg" alt="Keyframes 04 summer combination" loading="lazy">
             <span class="sb-zoom">Click to zoom</span>
           </div>
-          <div class="sb-body compact"><div class="sb-top"><span class="sb-code">B04</span><span class="sb-tag">ASMR · 27s</span></div><div class="sb-actions"><button class="copy-btn ghost" data-script="SHOT LIST - B04 ASMR FOAM CLOUD
-1. MACRO · pump hiss (no talking)
-2. MACRO · foam doming out
-3. CU · bubbles popping into essence
-4. MED · half-face reveal
-Timing: 0-3 / 3-7 / 7-12 / 12-23 / 23-27s">Copy shot list</button></div></div>
+          <div class="sb-body compact">
+            <div class="sb-top"><span class="sb-code">04</span><span class="sb-tag">Summer combination · 26 sec</span></div>
+            <div class="sb-actions"><button class="copy-btn ghost" data-script="KEYFRAMES 04 - SUMMER COMBINATION
+1. Capture T-zone shine
+2. One pump · airy microfoam
+3. Press in · let it absorb
+4. Light touch · show the finish
+
+Shake the bottle 2-3 times before every pump - it reads as texture on camera.">Copy shot list</button></div>
+          </div>
         </article>
       </div>
     </section>
@@ -1282,6 +1316,17 @@ Timing: 0-3 / 3-7 / 7-12 / 12-23 / 23-27s">Copy shot list</button></div></div>
       <h2>Ultra-Fit Bubble System™</h2>
       <p>Three things happen in the two seconds after you pump: the double-mesh pump whips the liquid into micro-foam, the foam bursts against your skin, and the actives ride the water layer into the surface of the stratum corneum.</p>
 
+      <div class="delivery-strip">
+        <div class="ds-lead">
+          <span class="ds-kicker">Selling point 03 · delivery</span>
+          <h3>Faster, deeper absorption</h3>
+          <p>A flat liquid serum can sit on top of the skin. Micro-foam plus a liposome vehicle is built to move — measured against an ordinary liquid serum.</p>
+        </div>
+        <div class="ds-stat"><b>189<em>%</em></b><span>faster absorption</span></div>
+        <div class="ds-stat"><b>36<em>%</em></b><span>more absorbed</span></div>
+        <div class="ds-stat"><b>20<em>th</em></b><span>layer of the stratum corneum, hydrated</span></div>
+      </div>
+
       <div class="system-steps">
         <div class="step-card">
           <div class="step-media">
@@ -1323,7 +1368,7 @@ Timing: 0-3 / 3-7 / 7-12 / 12-23 / 23-27s">Copy shot list</button></div></div>
         </div>
       </div>
 
-      <p class="system-foot">*Illustration of the delivery concept, not a depiction of penetration depth in an individual user.</p>
+      <p class="system-foot">*Illustration of the delivery concept. Absorption: 189.14% faster and 36.44% more vs. an ordinary liquid serum; hydration measured down to the 20th layer of the stratum corneum after one use. Individual results vary.</p>
     </section>
 
     <!-- ============ INGREDIENTS ============ -->
@@ -1549,12 +1594,20 @@ Timing: 0-3 / 3-7 / 7-12 / 12-23 / 23-27s">Copy shot list</button></div></div>
       const counter = document.getElementById('pumpCounter');
       if (!stage || !counter) return;
       let pumps = 0;
+      const bottle = document.getElementById('heroProduct');
       const pump = () => {
         pumps += 1;
-        counter.innerHTML = 'Tap the bottle · <b>' + pumps + '</b> pump' + (pumps > 1 ? 's' : '');
+        counter.innerHTML = 'Shake, pump, press · <b>' + pumps + '</b> pump' + (pumps > 1 ? 's' : '');
+        if (bottle) {
+          bottle.classList.remove('shaking');
+          void bottle.offsetWidth;
+          bottle.classList.add('shaking');
+          setTimeout(() => bottle.classList.remove('shaking'), 460);
+        }
         const rect = stage.getBoundingClientRect();
         const cx = rect.width * 0.5;
         const cy = rect.height * 0.34;
+        setTimeout(() => {
         for (let i = 0; i < 16; i++) {
           const p = document.createElement('span');
           p.className = 'foam-particle';
@@ -1570,6 +1623,7 @@ Timing: 0-3 / 3-7 / 7-12 / 12-23 / 23-27s">Copy shot list</button></div></div>
           stage.appendChild(p);
           setTimeout(() => p.remove(), 950);
         }
+        }, 380);
       };
       stage.addEventListener('click', pump);
       stage.addEventListener('keydown', (e) => {
